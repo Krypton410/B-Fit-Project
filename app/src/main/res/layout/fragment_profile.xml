@@ -1,0 +1,197 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_x="2dp"
+        android:layout_y="-7dp">
+        <AbsoluteLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/section_label"
+            android:text="Name"
+            android:textSize="15dp"
+            android:textColor="#000"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_x="18dp"
+            android:layout_y="41dp" />
+
+        <EditText
+            android:layout_width="262dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:layout_x="99dp"
+            android:layout_y="28dp"
+            android:id="@+id/name" />
+
+        <TextView
+            android:id="@+id/section_labe2"
+            android:text="Age"
+            android:textSize="15dp"
+            android:textColor="#000"
+            android:layout_width="84dp"
+            android:layout_height="wrap_content"
+            android:layout_x="19dp"
+            android:layout_y="209dp" />
+
+        <NumberPicker
+            android:layout_width="249dp"
+            android:layout_height="70dp"
+            android:layout_x="100dp"
+            android:layout_y="182dp"
+            android:id="@+id/age"
+
+            android:descendantFocusability="blocksDescendants" />
+
+        <TextView
+            android:id="@+id/section_labe3"
+            android:text="Height"
+            android:textSize="15dp"
+            android:textColor="#000"
+            android:layout_width="73dp"
+            android:layout_height="wrap_content"
+            android:layout_x="19dp"
+            android:layout_y="304dp" />
+            <TextView
+                android:id="@+id/section_labe8"
+                android:text="Ft"
+                android:textSize="15dp"
+                android:textColor="#000"
+                android:layout_width="24dp"
+                android:layout_height="wrap_content"
+                android:layout_x="120dp"
+                android:layout_y="304dp" />
+            <TextView
+                android:id="@+id/section_labe9"
+                android:text="Inches"
+                android:textSize="15dp"
+                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_x="232dp"
+                android:layout_y="304dp" />
+
+            <!--<EditText-->
+                <!--android:layout_width="90dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:ems="10"-->
+                <!--android:layout_x="128dp"-->
+                <!--android:layout_y="281dp"-->
+                <!--android:id="@+id/getHeightInches"-->
+                <!--android:inputType="number" />-->
+            <NumberPicker
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_x="149dp"
+                android:layout_y="279dp"
+                android:id="@+id/height_Ft"
+                android:descendantFocusability="blocksDescendants" />
+
+        <TextView
+            android:id="@+id/section_labe4"
+            android:text="Weight"
+            android:textSize="15dp"
+            android:textColor="#000"
+            android:layout_width="73dp"
+            android:layout_height="wrap_content"
+            android:layout_x="19dp"
+            android:layout_y="394dp" />
+
+        <Spinner
+            android:layout_width="99dp"
+            android:layout_height="wrap_content"
+            android:layout_x="112dp"
+            android:layout_y="394dp"
+            android:id="@+id/unitWeight"
+            android:entries="@array/weight"/>
+
+        <EditText
+            android:layout_width="106dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_x="233dp"
+            android:layout_y="386dp"
+            android:id="@+id/getWeight"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:id="@+id/section_labe6"
+            android:text="Gender"
+            android:textSize="15dp"
+            android:textColor="#000"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_x="18dp"
+            android:layout_y="119dp" />
+
+        <RadioGroup
+            android:layout_width="222dp"
+            android:layout_height="27dp"
+            android:layout_x="117dp"
+            android:layout_y="117dp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:id="@+id/gender">
+
+            <RadioButton
+                android:text="Male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_x="272dp"
+                android:layout_y="140dp"
+                android:id="@+id/male"
+                android:layout_weight="0.40" />
+
+            <RadioButton
+                android:text="Female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_x="152dp"
+                android:layout_y="125dp"
+                android:id="@+id/female" />
+        </RadioGroup>
+
+            <!--<EditText-->
+            <!--android:layout_width="78dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:ems="10"-->
+            <!--android:layout_x="284dp"-->
+            <!--android:layout_y="281dp"-->
+            <!--android:id="@+id/getHeightFt"-->
+            <!--android:inputType="number" />-->
+            <NumberPicker
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_x="284dp"
+                android:layout_y="279dp"
+                android:id="@+id/height_Inch"
+                android:descendantFocusability="blocksDescendants" />
+
+
+            <Button
+                android:text="Update"
+                android:layout_width="120dp"
+                android:layout_height="37dp"
+                android:layout_x="240dp"
+                android:layout_y="530dp"
+                android:textColor="#f9f9f9"
+                android:background="@android:color/holo_red_dark"
+                android:id="@+id/button2" />
+        </AbsoluteLayout>>
+
+    </ScrollView>
+
+
+</AbsoluteLayout>
