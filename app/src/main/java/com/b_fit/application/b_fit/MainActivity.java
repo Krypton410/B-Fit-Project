@@ -15,8 +15,8 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 
+import android.view.ViewGroup;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity{
@@ -43,9 +43,9 @@ public class MainActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        viewPager = (ViewPager) findViewById(R.id.ViewPager1);
+        //viewPager = (ViewPager) findViewById(R.id.ViewPager1);
         adapter = new CustomSwipeAdapter(this);
-        viewPager.setAdapter(adapter);
+        //viewPager.setAdapter(adapter);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
@@ -56,6 +56,8 @@ public class MainActivity extends AppCompatActivity{
         mViewPager.setAdapter(mSectionsPagerAdapter);
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
+
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             //fab
@@ -63,6 +65,7 @@ public class MainActivity extends AppCompatActivity{
             public void onClick(View view) {
                 Snackbar.make(view, "IT301", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+
             }
         });
 
@@ -112,6 +115,7 @@ public class MainActivity extends AppCompatActivity{
         Calculator cal = new Calculator();
         Info inf = new Info();
 
+
         @Override
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
@@ -120,21 +124,17 @@ public class MainActivity extends AppCompatActivity{
 
 
             switch (position) {
+
                 case 0:
-
-                    return pro;
-                case 1:
-
                     return gen;
-                case 2:
-
+                case 1:
                     return cal;
-                case 3:
-
-
+                case 2:
                     return  inf;
             }
             return null;
+
+
         }
 
 
@@ -142,23 +142,30 @@ public class MainActivity extends AppCompatActivity{
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 4;
+//            viewPager.setCurrentItem(1);
+            return 3;
+
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
+
             switch (position) {
+//                case 0:
+//                    Profile profile = new Profile();
+//                    return "Profile";
                 case 0:
-                    Profile profile = new Profile();
-                    return "Profile";
-                case 1:
                     return "WORKOUT GENERATOR";
+                case 1:
+                    return "NUTRITION CALCULATOR";
                 case 2:
-                    return "FITNESS CALCULATOR";
-                case 3:
                     return  "Info";
             }
             return null;
+
+
         }
+
     }
+
 }

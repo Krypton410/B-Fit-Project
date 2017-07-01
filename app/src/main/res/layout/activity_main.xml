@@ -28,16 +28,7 @@
             android:weightSum="1">
 
 
-                    <android.support.v4.view.ViewPager
-                        android:id="@+id/ViewPager1"
-                        android:layout_width="357dp"
-                        android:layout_height="186dp"
-                        android:scaleX="2"
-                        android:scaleY="2"
-                        android:layout_marginTop="-9dp"
-                        android:layout_weight="0.32">
 
-                    </android.support.v4.view.ViewPager>
 
 
         </android.support.v7.widget.Toolbar>

@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,7 +33,8 @@ import static android.R.attr.trimPathEnd;
  * Created by Maxwell on 6/25/2017.
  */
 
-public class Profile  extends Fragment{
+public class Profile  extends Fragment
+{
     NumberPicker getAge, getFt, getInch;
     RadioGroup radioGroup;
     RadioButton m,f;
@@ -97,11 +99,11 @@ public class Profile  extends Fragment{
                     theName = getName.getText().toString();
                     theWeight = getWeight.getText().toString();
                     int selectedIdGender = radioGroup.getCheckedRadioButtonId();// Getting The Gender
-                    theGender = ((RadioButton)getView().findViewById(selectedIdGender)).getText().toString();
+                    theGender = ((RadioButton) getView().findViewById(selectedIdGender)).getText().toString();
                     theAge = getAge.getValue();
                     theFt = getFt.getValue();
                     theInch = getInch.getValue();
-                    if(weightUnit.getSelectedItem().equals("Lbs")){
+                    if (weightUnit.getSelectedItem().equals("Lbs")) {
                         //Converts Lbs to kg if Lbs
                         theWeight = String.valueOf(Double.parseDouble(theWeight) * 0.453592);
                     }
@@ -115,7 +117,6 @@ public class Profile  extends Fragment{
                     viewPager.setCurrentItem(3);
                     Toast.makeText(getContext(), "Successfully Updated",
                             Toast.LENGTH_SHORT).show();
-
 
 
 //                    Fragment fragment = new Fragment();
@@ -133,9 +134,9 @@ public class Profile  extends Fragment{
         });
 
 
-    }
+    }}
 
 
 
 
-}
+

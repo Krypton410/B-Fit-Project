@@ -7,140 +7,155 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin">
 
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="300dp"
+        android:layout_height="37dp"
+        android:layout_x="41dp"
+        android:layout_y="473dp"
+        android:background="@android:color/holo_red_dark"
+        android:text="Change User"
+        android:textColor="#f9f9f9" />
+
     <TextView
-        android:id="@+id/section_label"
-        android:text="Name"
-        android:textColor="#000"
-        android:textSize="15dp"
+        android:id="@+id/section_labe3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_marginStart="21dp"
         android:layout_marginTop="49dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_x="40dp"
-        android:layout_y="60dp" />
+        android:layout_x="42dp"
+        android:layout_y="183dp"
+        android:text="Age"
+        android:textColor="#000"
+        android:textSize="15dp" />
+
     <TextView
-        android:id="@+id/name"
+        android:id="@+id/section_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="49dp"
+        android:layout_x="38dp"
+        android:layout_y="71dp"
         android:text="Name"
         android:textColor="#000"
-        android:textSize="15dp"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/name"
         android:layout_width="187dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_marginStart="21dp"
         android:layout_marginTop="49dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_x="120dp"
-        android:layout_y="60dp" />
+        android:layout_x="118dp"
+        android:layout_y="71dp"
+        android:text="Name"
+        android:textColor="#000"
+        android:textSize="15dp" />
 
     <TextView
         android:id="@+id/section_labe2"
-        android:text="Gender"
-        android:textColor="#000"
-        android:textSize="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_marginStart="21dp"
         android:layout_marginTop="49dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_x="40dp"
-        android:layout_y="120dp" />
+        android:layout_x="38dp"
+        android:layout_y="131dp"
+        android:text="Gender"
+        android:textColor="#000"
+        android:textSize="15dp" />
 
     <TextView
         android:id="@+id/gender"
-        android:text="Gender"
-        android:textColor="#000"
-        android:textSize="15dp"
         android:layout_width="187dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_marginStart="21dp"
         android:layout_marginTop="49dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_x="120dp"
-        android:layout_y="120dp" />
-    <TextView
-        android:id="@+id/section_labe3"
-        android:text="Age"
+        android:layout_x="118dp"
+        android:layout_y="131dp"
+        android:text="Gender"
         android:textColor="#000"
-        android:textSize="15dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="49dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_x="40dp"
-        android:layout_y="180dp" />
+        android:textSize="15dp" />
 
     <TextView
         android:id="@+id/age"
+        android:layout_width="187dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="49dp"
+        android:layout_x="118dp"
+        android:layout_y="191dp"
         android:text="Age"
         android:textColor="#000"
-        android:textSize="15dp"
-        android:layout_width="187dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="49dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_x="120dp"
-        android:layout_y="180dp" />
+        android:textSize="15dp" />
+
     <TextView
         android:id="@+id/section_labe4"
-        android:text="Height"
-        android:textColor="#000"
-        android:textSize="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_marginStart="21dp"
         android:layout_marginTop="49dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_x="40dp"
-        android:layout_y="240dp" />
-    <TextView
-        android:id="@+id/height"
+        android:layout_x="38dp"
+        android:layout_y="251dp"
         android:text="Height"
         android:textColor="#000"
-        android:textSize="15dp"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/height"
         android:layout_width="187dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_marginStart="21dp"
         android:layout_marginTop="49dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_x="120dp"
-        android:layout_y="240dp" />
-
+        android:layout_x="118dp"
+        android:layout_y="251dp"
+        android:text="Height"
+        android:textColor="#000"
+        android:textSize="15dp" />
 
     <TextView
         android:id="@+id/section_labe5"
-        android:text="Weight"
-        android:textColor="#000"
-        android:textSize="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_marginStart="21dp"
         android:layout_marginTop="49dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_x="40dp"
-        android:layout_y="300dp" />
-    <TextView
-        android:id="@+id/weight"
+        android:layout_x="38dp"
+        android:layout_y="311dp"
         android:text="Weight"
         android:textColor="#000"
-        android:textSize="15dp"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/weight"
         android:layout_width="187dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_marginStart="21dp"
         android:layout_marginTop="49dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_x="120dp"
-        android:layout_y="300dp" />
+        android:layout_x="118dp"
+        android:layout_y="311dp"
+        android:text="Weight"
+        android:textColor="#000"
+        android:textSize="15dp" />
 
 </AbsoluteLayout>

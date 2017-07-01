@@ -18,8 +18,8 @@ public class splash_Screen extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-//        ActionBar actionbar = getSupportActionBar();
-//        actionbar.hide();
+        ActionBar actionbar = getSupportActionBar();
+        actionbar.hide();
         setContentView(R.layout.splash_main);
         new Handler().postDelayed(new Runnable(){
             @Override

@@ -27,8 +27,8 @@ public class Generator extends Fragment{
     ProgressBar pb;
     RadioButton beginner,intermediate,advanced, weight, bodyweight, incorporate;
     TextView chest1, chest2, chest3, chest4, back1,back2,back3, back4, abs1, abs2, abs3, abs4, legs1, legs2, legs3, legs4;
-    int a,a1,a2,a3,d,d1,d2,d3;
-    String[]bchest, ichest;
+    int a,a1,a2,a3, b, b1, b2, b3, ba, ba1, ba2, ba3, c, c1, c2, c3, d,d1,d2,d3, e, e1, e2, e3, f, f1, f2, f3;
+    String[]bchest, bback, babs, blegs, ichest, iback, iabs;
     int pbTime = (int) (Math.random() * 1000);
 
     @Override
@@ -79,7 +79,7 @@ public class Generator extends Fragment{
         legs4 = (TextView) getView().findViewById(R.id.legs4);
 
 
-        //Beginner
+        //Chest for Beginner
         bchest = new String[10];
         bchest[0] = "Declined Push ups";
         bchest[1] = "Inclined Push ups";
@@ -99,7 +99,56 @@ public class Generator extends Fragment{
 
 
 
-        //Intermediate
+       //Back for Beginner
+        bback = new String[9];
+        bback[0] = "Australian Pull Ups";
+        bback[1] = "1 arm Australian pull ups";
+        bback[2] = "Chin ups";
+        bback[3] = "Good Mornings";
+        bback[4] = "Reverse Archer Sit ups";
+        bback[5] = "Reverse Snow Angels";
+        bback[6] = "Negative Pull ups";
+        bback[7] = "Negative Chin Ups";
+        bback[8] = "Australian Chin ups";
+        b = (int) (Math.random()*9);
+        b1 = (int) (Math.random()*9);
+        b2 = (int) (Math.random()*9);
+        b3 = (int) (Math.random()*9);
+
+        //abs for beginner
+        babs = new String[10];
+        babs[0] = "Sit ups";
+        babs[1] = "knee planks";
+        babs[2] = "V ups";
+        babs[3] = "Plank Ups";
+        babs[4] = "Reverse plank ups";
+        babs[5] = "Lying Leg Raise";
+        babs[6] = "Single arm plank";
+        babs[7] = "Straddle planks";
+        babs[8] = "Straddle V ups";
+        babs[9] = "Crunches";
+        ba = (int) (Math.random()*10);
+        ba1 = (int) (Math.random()*10);
+        ba2 = (int) (Math.random()*10);
+        ba3 = (int) (Math.random()*10);
+
+       //legs for beginner
+        blegs = new String[9];
+        blegs[0] = "Regular Squat";
+        blegs[1] = "close squat";
+        blegs[2] = "Bulgarian Split Squat";
+        blegs[3] = "Side Lunges";
+        blegs[4] = "Cossack squat";
+        blegs[5] = "Sumo squats";
+        blegs[6] = "Hindu squats";
+        blegs[7] = "Frog Jumps";
+        blegs[8] = "Jumping Lunges";
+        c = (int) (Math.random()*9);
+        c1 = (int) (Math.random()*9);
+        c2 = (int) (Math.random()*9);
+        c3 = (int) (Math.random()*9);
+
+        //Chest for Intermediate
         ichest = new String[10];
         ichest[0] = "Clapping Push Ups";
         ichest[1] = "Finger tip Push ups";
@@ -115,6 +164,42 @@ public class Generator extends Fragment{
         d1 = (int) (Math.random()*10);
         d2 = (int) (Math.random()*10);
         d3 = (int) (Math.random()*10);
+
+
+
+       //Back for intemediate
+        iback = new String[9];
+        iback[0] = "Pull Ups";
+        iback[1] = "Close grip Pull ups";
+        iback[2] = "Wide grip Pull ups";
+        iback[3] = "Wide grip Chin ups";
+        iback[4] = "Close grip chin ups";
+        iback[5] = "Slow PU (5 sec up 5 sec down)";
+        iback[6] = "Alternate grip switch PU/CU";
+        iback[7] = "Weighted Australian PU";
+        iback[8] = "Weighted Australian CU";
+        e = (int) (Math.random()*9);
+        e1 = (int) (Math.random()*9);
+        e2 = (int) (Math.random()*9);
+        e3 = (int) (Math.random()*9);
+
+
+       //Abs for intermediate
+        iabs = new String[9];
+        iabs[0] = "knee raise";
+        iabs[1] = "knee oblique twist(bar)";
+        iabs[2] = "oblique twists";
+        iabs[3] = "Side Plank";
+        iabs[4] = "Leg raises(Ground)";
+        iabs[5] = "Pike ups";
+        iabs[6] = "Crossfit toe to bar";
+        iabs[7] = "Hollow body hold half";
+        iabs[8] = "Abs slider (Towel)";
+        f = (int) (Math.random()*9);
+        f1 = (int) (Math.random()*9);
+        f2 = (int) (Math.random()*9);
+        f3 = (int) (Math.random()*9);
+
 
 
         //Setting Visibility False/Gone

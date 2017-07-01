@@ -12,359 +12,332 @@
         <LinearLayout
             android:layout_height="fill_parent"
             android:layout_width="match_parent"  >
-        <AbsoluteLayout
-            android:layout_height="729dp"
-            android:layout_width="fill_parent"
-            >
-                    <TextView
-                        android:id="@+id/section_label"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
 
-                    <TextView
-                        android:text="Please Choose Category :"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_x="8dp"
-                        android:layout_y="10dp"
-                        android:id="@+id/textView"
-                        android:textColor="@android:color/black"
-                        android:fontFamily="sans-serif-condensed"
-                        android:textSize="15sp" />
+            <AbsoluteLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1379dp">
 
-                    <RadioGroup
-                        android:layout_width="315dp"
-                        android:layout_height="85dp"
-                        android:layout_x="8dp"
-                        android:layout_y="40dp"
-                        android:orientation="vertical"
-                        android:id="@+id/category">
+                <TextView
+                    android:id="@+id/section_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
-                        <RadioButton
-                            android:text="Beginner"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/beginner"
-                            android:layout_weight="1" />
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="8dp"
+                    android:layout_y="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Please Choose Category :"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
 
-                        <RadioButton
-                            android:text="Intermediate"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/intermediate"
-                            android:layout_weight="1" />
-                        <RadioButton
-                            android:text="Advanced"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/advanced"
-                            android:layout_weight="1" />
+                <RadioGroup
+                    android:id="@+id/category"
+                    android:layout_width="315dp"
+                    android:layout_height="85dp"
+                    android:layout_x="8dp"
+                    android:layout_y="40dp"
+                    android:orientation="vertical">
 
-                    </RadioGroup>
-
-
-
-                    <TextView
-                        android:text="Style :"
+                    <RadioButton
+                        android:id="@+id/beginner"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_x="8dp"
-                        android:layout_y="140dp"
-                        android:id="@+id/textView1"
-                        android:textColor="@android:color/black"
-                        android:fontFamily="sans-serif-condensed"
-                        android:textSize="15sp" />
+                        android:layout_weight="1"
+                        android:text="Beginner" />
 
-
-                    <RadioGroup
-                        android:layout_width="match_parent"
+                    <RadioButton
+                        android:id="@+id/intermediate"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_x="8dp"
-                        android:layout_y="170dp"
-                        android:orientation="horizontal"
-                        android:id="@+id/style">
+                        android:layout_weight="1"
+                        android:text="Intermediate" />
 
-                        <RadioButton
-                            android:text="Bodyweight"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/bodyweight"
-                            android:layout_weight="1" />
+                    <RadioButton
+                        android:id="@+id/advanced"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Advanced" />
 
-                        <RadioButton
-                            android:text="Weights"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/weight"
-                            android:layout_weight="1" />
-                        <RadioButton
-                            android:text="Incorporate"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/incorporate"
-                            android:layout_weight="1" />
+                </RadioGroup>
 
-                    </RadioGroup>
 
-       <AbsoluteLayout
-           android:layout_height="3dp"
-           android:layout_width="match_parent"
-           android:layout_y="230dp"
-           android:background="@android:color/holo_red_dark">
-           </AbsoluteLayout>
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="8dp"
+                    android:layout_y="140dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Style :"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
 
-            <ProgressBar
-                style="?android:attr/progressBarStyleLarge"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_x="154dp"
-                android:layout_y="401dp"
-                android:foregroundGravity="center"
-                android:theme="@style/AppTheme.Custom"
-                android:indeterminate="true"
-                android:id="@+id/progressBar" />
-        <AbsoluteLayout
-            android:layout_height="427dp"
-            android:layout_width="match_parent"
-            android:layout_y="243dp">
 
-        <HorizontalScrollView
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"
-            android:orientation="horizontal">
-            <LinearLayout
-                android:layout_height="fill_parent"
-                android:layout_width="427dp"  >
+                <RadioGroup
+                    android:id="@+id/style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_x="8dp"
+                    android:layout_y="170dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/bodyweight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Bodyweight" />
+
+                    <RadioButton
+                        android:id="@+id/weight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Weights" />
+
+                    <RadioButton
+                        android:id="@+id/incorporate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Incorporate" />
+
+                </RadioGroup>
 
                 <AbsoluteLayout
-                    android:layout_width="1633dp"
-                    android:layout_height="match_parent">
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_y="230dp"
+                    android:background="@android:color/holo_red_dark"></AbsoluteLayout>
 
-                    <TextView
-                        android:id="@+id/statusSetter"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_x="12dp"
-                        android:layout_y="10dp"
-                        android:text="statusSetter"
-                        android:textColor="@android:color/background_dark"
-                        android:textSize="15sp" />
-
-
-                    <TextView
-                        android:id="@+id/misc2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_x="428dp"
-                        android:layout_y="33dp"
-                        android:text="Back Routine"
-                        android:textColor="@android:color/background_dark"
-                        android:textSize="40sp" />
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="154dp"
+                    android:layout_y="401dp"
+                    android:foregroundGravity="center"
+                    android:indeterminate="true"
+                    android:theme="@style/AppTheme.Custom" />
 
 
-                    <TextView
-                        android:id="@+id/misc3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_x="841dp"
-                        android:layout_y="33dp"
-                        android:text="Abs Routine"
-                        android:textColor="@android:color/background_dark"
-                        android:textSize="40sp" />
+                <TextView
+                    android:id="@+id/statusSetter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="8dp"
+                    android:layout_y="259dp"
+                    android:text="statusSetter"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/misc2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="6dp"
+                    android:layout_y="581dp"
+                    android:text="Back Routine"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:id="@+id/back1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="8dp"
+                    android:layout_y="654dp"
+                    android:text="Back 1"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/back2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="8dp"
+                    android:layout_y="684dp"
+                    android:text="Back 2"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/back3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="8dp"
+                    android:layout_y="714dp"
+                    android:text="Back 3"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/back4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="8dp"
+                    android:layout_y="744dp"
+                    android:text="Back 4"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/misc3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="6dp"
+                    android:layout_y="807dp"
+                    android:text="Abs Routine"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:id="@+id/abs1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="6dp"
+                    android:layout_y="881dp"
+                    android:text="abs 1"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/abs2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="6dp"
+                    android:layout_y="911dp"
+                    android:text="abs 2"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/abs3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="6dp"
+                    android:layout_y="940dp"
+                    android:text="abs 3"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/misc4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="8dp"
+                    android:layout_y="1039dp"
+                    android:text="Legs Routine"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:id="@+id/legs1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="8dp"
+                    android:layout_y="1111dp"
+                    android:text="legs 1"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/legs2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="8dp"
+                    android:layout_y="1143dp"
+                    android:text="legs 2"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/legs3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="8dp"
+                    android:layout_y="1170dp"
+                    android:text="legs 3"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/legs4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="8dp"
+                    android:layout_y="1202dp"
+                    android:text="legs 4"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/misc1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="11dp"
+                    android:layout_y="318dp"
+                    android:text="Chest"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:id="@+id/chest1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="11dp"
+                    android:layout_y="385dp"
+                    android:text="Chest 1"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/chest2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="11dp"
+                    android:layout_y="415dp"
+                    android:text="Chest 2"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/chest3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="11dp"
+                    android:layout_y="445dp"
+                    android:text="Chest 3"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/chest4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="11dp"
+                    android:layout_y="475dp"
+                    android:text="Chest 4"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/abs4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="8dp"
+                    android:layout_y="975dp"
+                    android:text="abs 4"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="20sp" />
 
 
-                    <TextView
-                        android:id="@+id/misc4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_x="1254dp"
-                        android:layout_y="33dp"
-                        android:text="Legs Routine"
-                        android:textColor="@android:color/background_dark"
-                        android:textSize="40sp" />
-
-                    <TextView
-                        android:id="@+id/misc1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_x="15dp"
-                        android:layout_y="39dp"
-                        android:text="Chest"
-                        android:textColor="@android:color/background_dark"
-                        android:textSize="40sp" />
-
-                    <TextView
-                        android:id="@+id/chest1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_x="15dp"
-                        android:layout_y="106dp"
-                        android:text="Chest 1"
-                        android:textColor="@android:color/background_dark"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@+id/chest2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_x="15dp"
-                        android:layout_y="136dp"
-                        android:text="Chest 2"
-                        android:textColor="@android:color/background_dark"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@+id/chest3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_x="15dp"
-                        android:layout_y="166dp"
-                        android:text="Chest 3"
-                        android:textColor="@android:color/background_dark"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@+id/chest4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_x="15dp"
-                        android:layout_y="196dp"
-                        android:text="Chest 4"
-                        android:textColor="@android:color/background_dark"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@+id/back1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_x="431dp"
-                        android:layout_y="106dp"
-                        android:text="Back 1"
-                        android:textColor="@android:color/background_dark"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@+id/back2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_x="431dp"
-                        android:layout_y="136dp"
-                        android:text="Back 2"
-                        android:textColor="@android:color/background_dark"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@+id/back3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_x="431dp"
-                        android:layout_y="166dp"
-                        android:text="Back 3"
-                        android:textColor="@android:color/background_dark"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@+id/back4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_x="431dp"
-                        android:layout_y="196dp"
-                        android:text="Back 4"
-                        android:textColor="@android:color/background_dark"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@+id/abs1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_x="841dp"
-                        android:layout_y="106dp"
-                        android:text="abs 1"
-                        android:textColor="@android:color/background_dark"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@+id/abs3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_x="841dp"
-                        android:layout_y="166dp"
-                        android:text="abs 3"
-                        android:textColor="@android:color/background_dark"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@+id/abs4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_x="841dp"
-                        android:layout_y="196dp"
-                        android:text="abs 4"
-                        android:textColor="@android:color/background_dark"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@+id/abs2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_x="841dp"
-                        android:layout_y="136dp"
-                        android:text="abs 2"
-                        android:textColor="@android:color/background_dark"
-                        android:textSize="20sp" />
-
-
-
-
-                    <TextView
-                        android:id="@+id/legs1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_x="1254dp"
-                        android:layout_y="106dp"
-                        android:text="legs 1"
-                        android:textColor="@android:color/background_dark"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@+id/legs3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_x="1254dp"
-                        android:layout_y="166dp"
-                        android:text="legs 3"
-                        android:textColor="@android:color/background_dark"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@+id/legs4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_x="1254dp"
-                        android:layout_y="196dp"
-                        android:text="legs 4"
-                        android:textColor="@android:color/background_dark"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@+id/legs2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_x="1254dp"
-                        android:layout_y="136dp"
-                        android:text="legs 2"
-                        android:textColor="@android:color/background_dark"
-                        android:textSize="20sp" />
-
-                </AbsoluteLayout>
-
-            </LinearLayout>
-
-            </HorizontalScrollView>
-
-
-        </AbsoluteLayout>
-        </AbsoluteLayout>
+            </AbsoluteLayout>
         </LinearLayout>>
 </ScrollView>
     <AbsoluteLayout
