@@ -191,90 +191,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_x="6dp"
-                    android:layout_y="807dp"
+                    android:layout_y="844dp"
                     android:text="Abs Routine"
                     android:textColor="@android:color/background_dark"
                     android:textSize="40sp" />
-
-                <TextView
-                    android:id="@+id/abs1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_x="6dp"
-                    android:layout_y="881dp"
-                    android:text="abs 1"
-                    android:textColor="@android:color/background_dark"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/abs2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_x="6dp"
-                    android:layout_y="911dp"
-                    android:text="abs 2"
-                    android:textColor="@android:color/background_dark"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/abs3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_x="6dp"
-                    android:layout_y="940dp"
-                    android:text="abs 3"
-                    android:textColor="@android:color/background_dark"
-                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/misc4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_x="8dp"
-                    android:layout_y="1039dp"
+                    android:layout_y="1107dp"
                     android:text="Legs Routine"
                     android:textColor="@android:color/background_dark"
                     android:textSize="40sp" />
-
-                <TextView
-                    android:id="@+id/legs1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_x="8dp"
-                    android:layout_y="1111dp"
-                    android:text="legs 1"
-                    android:textColor="@android:color/background_dark"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/legs2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_x="8dp"
-                    android:layout_y="1143dp"
-                    android:text="legs 2"
-                    android:textColor="@android:color/background_dark"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/legs3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_x="8dp"
-                    android:layout_y="1170dp"
-                    android:text="legs 3"
-                    android:textColor="@android:color/background_dark"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/legs4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_x="8dp"
-                    android:layout_y="1202dp"
-                    android:text="legs 4"
-                    android:textColor="@android:color/background_dark"
-                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/misc1"
@@ -327,37 +257,111 @@
                     android:textSize="20sp" />
 
                 <TextView
+                    android:id="@+id/abs1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="11dp"
+                    android:layout_y="920dp"
+                    android:text="abs 1"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/abs2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="10dp"
+                    android:layout_y="951dp"
+                    android:text="abs 2"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/abs3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="10dp"
+                    android:layout_y="980dp"
+                    android:text="abs 3"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="20sp" />
+
+                <TextView
                     android:id="@+id/abs4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_x="8dp"
-                    android:layout_y="975dp"
+                    android:layout_x="12dp"
+                    android:layout_y="1016dp"
                     android:text="abs 4"
                     android:textColor="@android:color/background_dark"
                     android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/legs1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="8dp"
+                    android:layout_y="1174dp"
+                    android:text="legs 1"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/legs2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="8dp"
+                    android:layout_y="1206dp"
+                    android:text="legs 2"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/legs3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="8dp"
+                    android:layout_y="1233dp"
+                    android:text="legs 3"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/legs4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="8dp"
+                    android:layout_y="1265dp"
+                    android:text="legs 4"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="20sp" />
+
+
 
 
             </AbsoluteLayout>
         </LinearLayout>>
 </ScrollView>
+
     <AbsoluteLayout
 
-        android:layout_height="wrap_content"
-        android:layout_width="373dp"
-        android:layout_y="535dp"
-        android:layout_x="3dp">
+        android:layout_width="368dp"
+        android:layout_height="40dp"
+        android:layout_x="4dp"
+        android:layout_y="525dp">
 
         <Button
-            android:text="Generate"
+            android:id="@+id/button"
 
             android:layout_width="368dp"
-            android:layout_height="37dp"
-            android:id="@+id/button"
+            android:layout_height="38dp"
+            android:layout_x="0dp"
+            android:layout_y="0dp"
             android:background="@android:color/holo_red_dark"
-            android:textColor="@android:color/background_light"
             android:fontFamily="sans-serif-medium"
-            android:layout_x="8dp"
-            android:layout_y="0dp" />
+            android:text="Generate"
+            android:textColor="@android:color/background_light" />
+
     </AbsoluteLayout>
 
 </AbsoluteLayout>

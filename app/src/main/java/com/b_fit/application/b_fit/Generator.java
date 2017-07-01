@@ -1,6 +1,7 @@
 package com.b_fit.application.b_fit;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.transition.Visibility;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -91,10 +92,10 @@ public class Generator extends Fragment{
         bchest[7] = "Wall push ups";
         bchest[8] = "Spiderman Push ups";
         bchest[9] = "Plank to push ups";
-        a = (int) (Math.random()*10);
-        a1 = (int) (Math.random()*10);
-        a2 = (int) (Math.random()*10);
-        a3 = (int) (Math.random()*10);
+//        a = (int) (Math.random()*10);
+//        a1 = (int) (Math.random()*10);
+//        a2 = (int) (Math.random()*10);
+//        a3 = (int) (Math.random()*10);
 
 
 
@@ -110,10 +111,10 @@ public class Generator extends Fragment{
         bback[6] = "Negative Pull ups";
         bback[7] = "Negative Chin Ups";
         bback[8] = "Australian Chin ups";
-        b = (int) (Math.random()*9);
-        b1 = (int) (Math.random()*9);
-        b2 = (int) (Math.random()*9);
-        b3 = (int) (Math.random()*9);
+//        b = (int) (Math.random()*9);
+//        b1 = (int) (Math.random()*9);
+//        b2 = (int) (Math.random()*9);
+//        b3 = (int) (Math.random()*9);
 
         //abs for beginner
         babs = new String[10];
@@ -127,10 +128,10 @@ public class Generator extends Fragment{
         babs[7] = "Straddle planks";
         babs[8] = "Straddle V ups";
         babs[9] = "Crunches";
-        ba = (int) (Math.random()*10);
-        ba1 = (int) (Math.random()*10);
-        ba2 = (int) (Math.random()*10);
-        ba3 = (int) (Math.random()*10);
+//        ba = (int) (Math.random()*10);
+//        ba1 = (int) (Math.random()*10);
+//        ba2 = (int) (Math.random()*10);
+//        ba3 = (int) (Math.random()*10);
 
        //legs for beginner
         blegs = new String[9];
@@ -143,10 +144,10 @@ public class Generator extends Fragment{
         blegs[6] = "Hindu squats";
         blegs[7] = "Frog Jumps";
         blegs[8] = "Jumping Lunges";
-        c = (int) (Math.random()*9);
-        c1 = (int) (Math.random()*9);
-        c2 = (int) (Math.random()*9);
-        c3 = (int) (Math.random()*9);
+//        c = (int) (Math.random()*9);
+//        c1 = (int) (Math.random()*9);
+//        c2 = (int) (Math.random()*9);
+//        c3 = (int) (Math.random()*9);
 
         //Chest for Intermediate
         ichest = new String[10];
@@ -160,10 +161,10 @@ public class Generator extends Fragment{
         ichest[7] = "Chest Tap Push ups";
         ichest[8] = "Russian Push ups";
         ichest[9] = "Weighted Push ups";
-        d = (int) (Math.random()*10);
-        d1 = (int) (Math.random()*10);
-        d2 = (int) (Math.random()*10);
-        d3 = (int) (Math.random()*10);
+//        d = (int) (Math.random()*10);
+//        d1 = (int) (Math.random()*10);
+//        d2 = (int) (Math.random()*10);
+//        d3 = (int) (Math.random()*10);
 
 
 
@@ -178,10 +179,10 @@ public class Generator extends Fragment{
         iback[6] = "Alternate grip switch PU/CU";
         iback[7] = "Weighted Australian PU";
         iback[8] = "Weighted Australian CU";
-        e = (int) (Math.random()*9);
-        e1 = (int) (Math.random()*9);
-        e2 = (int) (Math.random()*9);
-        e3 = (int) (Math.random()*9);
+//        e = (int) (Math.random()*9);
+//        e1 = (int) (Math.random()*9);
+//        e2 = (int) (Math.random()*9);
+//        e3 = (int) (Math.random()*9);
 
 
        //Abs for intermediate
@@ -195,10 +196,10 @@ public class Generator extends Fragment{
         iabs[6] = "Crossfit toe to bar";
         iabs[7] = "Hollow body hold half";
         iabs[8] = "Abs slider (Towel)";
-        f = (int) (Math.random()*9);
-        f1 = (int) (Math.random()*9);
-        f2 = (int) (Math.random()*9);
-        f3 = (int) (Math.random()*9);
+//        f = (int) (Math.random()*9);
+//        f1 = (int) (Math.random()*9);
+//        f2 = (int) (Math.random()*9);
+//        f3 = (int) (Math.random()*9);
 
 
 
@@ -238,24 +239,43 @@ public class Generator extends Fragment{
                 int selectedCategory = theCategory.getCheckedRadioButtonId();
                 String category_Picked = ((RadioButton)getView().findViewById(selectedCategory)).getText().toString();
                 pb.setVisibility((VISIBLE));
-                statusSetter.setText(category_Picked + "'s Workout");
+
                 if (selectedCategory == R.id.beginner){
-                    statusSetter.setVisibility(GONE);
-                chest1.setText(bchest[a]);
-                chest2.setText(bchest[a1]);
-                chest3.setText(bchest[a2]);
-                chest4.setText(bchest[a3]);
 
 
-                chest1.setVisibility(View.VISIBLE);
-                chest2.setVisibility(View.VISIBLE);
-                chest3.setVisibility(View.VISIBLE);
-                chest4.setVisibility(View.VISIBLE);
+
+
+
+                    statusSetter.setText(category_Picked+" 's Category");
+                    statusSetter.setVisibility(VISIBLE);
+                    chest1.setText(bchest[getRandomNumber(0,9)]);
+                    chest2.setText(bchest[getRandomNumber(0,9)]);
+                    chest3.setText(bchest[getRandomNumber(0,9)]);
+                    chest4.setText(bchest[getRandomNumber(0,9)]);
+
+                    back1.setText(bback[getRandomNumber(0,8)]);
+                    back2.setText(bback[getRandomNumber(0,8)]);
+                    back3.setText(bback[getRandomNumber(0,8)]);
+                    back4.setText(bback[getRandomNumber(0,8)]);
+
+                    chest1.setVisibility(View.VISIBLE);
+                    chest2.setVisibility(View.VISIBLE);
+                    chest3.setVisibility(View.VISIBLE);
+                    chest4.setVisibility(View.VISIBLE);
+
+                    back1.setVisibility(View.VISIBLE);
+                    back2.setVisibility(View.VISIBLE);
+                    back3.setVisibility(View.VISIBLE);
+                    back4.setVisibility(View.VISIBLE);
+
+
+
+
             }
 
             else if(selectedCategory == R.id.intermediate){
 
-                    statusSetter.setVisibility(GONE);
+                    statusSetter.setVisibility(VISIBLE);
 
                     chest1.setText(ichest[d]);
                     chest2.setText(ichest[d1]);
@@ -278,7 +298,9 @@ public class Generator extends Fragment{
 
 
     }
-
-
+    public int getRandomNumber(int min, int max) {
+        return (int)(Math.random() * ((max - min) + 1)) + min;
+    }
 
 }
+
