@@ -57,6 +57,10 @@ public class MainActivity extends AppCompatActivity{
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
+        tabLayout.getTabAt(0).setIcon(R.drawable.ic_directions_run_black_24dp);
+        tabLayout.getTabAt(1).setIcon(R.drawable.ic_restaurant_menu_black_24dp);
+        tabLayout.getTabAt(2).setIcon(R.drawable.ic_info_black_24dp);
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -155,9 +159,9 @@ public class MainActivity extends AppCompatActivity{
 //                    Profile profile = new Profile();
 //                    return "Profile";
                 case 0:
-                    return "WORKOUT GENERATOR";
+                    return "GENERATOR";
                 case 1:
-                    return "NUTRITION CALCULATOR";
+                    return "NUTRITION";
                 case 2:
                     return  "Info";
             }
