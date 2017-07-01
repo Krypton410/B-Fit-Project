@@ -17,7 +17,7 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
     <style name="AppTheme.Custom" parent="@style/Theme.AppCompat">
-        <item name="colorAccent">#0e9119</item>
+        <item name="colorAccent">#8c7f7f</item>
 
-    </style>
+  </style>
 </resources>

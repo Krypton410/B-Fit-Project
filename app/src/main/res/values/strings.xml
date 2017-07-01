@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">B-Fit</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Help</string>
+    <string name="action_settings1">Connect With Us</string>
     <string name="section_format">Hello World from section: %1$d</string>
 
 

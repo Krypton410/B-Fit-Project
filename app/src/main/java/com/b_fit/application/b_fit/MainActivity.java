@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity{
         tabLayout.setupWithViewPager(mViewPager);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
+            //fab
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "IT301", Snackbar.LENGTH_LONG)
@@ -92,6 +93,8 @@ public class MainActivity extends AppCompatActivity{
     }
 
 
+
+
     //PlaceHolderFragment Deleted
 
     /**
@@ -104,26 +107,37 @@ public class MainActivity extends AppCompatActivity{
             super(fm);
         }
 
+        Profile pro = new Profile();
+        Generator gen = new Generator();
+        Calculator cal = new Calculator();
+        Info inf = new Info();
+
         @Override
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
 //             Return a PlaceholderFragment (defined as a static inner class below).
+
+
+
             switch (position) {
                 case 0:
-                    Profile pro = new Profile();
+
                     return pro;
                 case 1:
-                    Generator gen = new Generator();
+
                     return gen;
                 case 2:
-                    Calculator cal = new Calculator();
+
                     return cal;
                 case 3:
-                    Info inf = new Info();
+
+
                     return  inf;
             }
             return null;
         }
+
+
 
         @Override
         public int getCount() {

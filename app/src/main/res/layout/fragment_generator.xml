@@ -123,7 +123,247 @@
                 android:theme="@style/AppTheme.Custom"
                 android:indeterminate="true"
                 android:id="@+id/progressBar" />
+        <AbsoluteLayout
+            android:layout_height="427dp"
+            android:layout_width="match_parent"
+            android:layout_y="243dp">
 
+        <HorizontalScrollView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_height="fill_parent"
+                android:layout_width="427dp"  >
+
+                <AbsoluteLayout
+                    android:layout_width="1633dp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/statusSetter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_x="12dp"
+                        android:layout_y="10dp"
+                        android:text="statusSetter"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="15sp" />
+
+
+                    <TextView
+                        android:id="@+id/misc2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_x="428dp"
+                        android:layout_y="33dp"
+                        android:text="Back Routine"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="40sp" />
+
+
+                    <TextView
+                        android:id="@+id/misc3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_x="841dp"
+                        android:layout_y="33dp"
+                        android:text="Abs Routine"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="40sp" />
+
+
+                    <TextView
+                        android:id="@+id/misc4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_x="1254dp"
+                        android:layout_y="33dp"
+                        android:text="Legs Routine"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="40sp" />
+
+                    <TextView
+                        android:id="@+id/misc1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_x="15dp"
+                        android:layout_y="39dp"
+                        android:text="Chest"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="40sp" />
+
+                    <TextView
+                        android:id="@+id/chest1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_x="15dp"
+                        android:layout_y="106dp"
+                        android:text="Chest 1"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/chest2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_x="15dp"
+                        android:layout_y="136dp"
+                        android:text="Chest 2"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/chest3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_x="15dp"
+                        android:layout_y="166dp"
+                        android:text="Chest 3"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/chest4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_x="15dp"
+                        android:layout_y="196dp"
+                        android:text="Chest 4"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/back1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_x="431dp"
+                        android:layout_y="106dp"
+                        android:text="Back 1"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/back2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_x="431dp"
+                        android:layout_y="136dp"
+                        android:text="Back 2"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/back3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_x="431dp"
+                        android:layout_y="166dp"
+                        android:text="Back 3"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/back4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_x="431dp"
+                        android:layout_y="196dp"
+                        android:text="Back 4"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/abs1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_x="841dp"
+                        android:layout_y="106dp"
+                        android:text="abs 1"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/abs3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_x="841dp"
+                        android:layout_y="166dp"
+                        android:text="abs 3"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/abs4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_x="841dp"
+                        android:layout_y="196dp"
+                        android:text="abs 4"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/abs2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_x="841dp"
+                        android:layout_y="136dp"
+                        android:text="abs 2"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20sp" />
+
+
+
+
+                    <TextView
+                        android:id="@+id/legs1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_x="1254dp"
+                        android:layout_y="106dp"
+                        android:text="legs 1"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/legs3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_x="1254dp"
+                        android:layout_y="166dp"
+                        android:text="legs 3"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/legs4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_x="1254dp"
+                        android:layout_y="196dp"
+                        android:text="legs 4"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/legs2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_x="1254dp"
+                        android:layout_y="136dp"
+                        android:text="legs 2"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20sp" />
+
+                </AbsoluteLayout>
+
+            </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+        </AbsoluteLayout>
         </AbsoluteLayout>
         </LinearLayout>>
 </ScrollView>

@@ -4,7 +4,21 @@
     tools:context="com.b_fit.application.b_fit.MainActivity">
     <item
         android:id="@+id/action_settings"
-        android:orderInCategory="100"
+        android:orderInCategory="101"
         android:title="@string/action_settings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/app_bar_search"
+        android:actionViewClass="android.widget.SearchView"
+        android:icon="@drawable/ic_search_black_24dp"
+
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom"
+        android:title="Search" />
+    <item
+        android:id="@+id/action_settings1"
+        android:orderInCategory="101"
+        android:title="@string/action_settings1"
         app:showAsAction="never" />
 </menu>

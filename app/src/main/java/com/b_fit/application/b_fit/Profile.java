@@ -38,9 +38,11 @@ public class Profile  extends Fragment{
     RadioButton m,f;
     EditText getName, getWeight;
     Button update;
+    Spinner weightUnit;
     ViewPager viewPager;
-    String theName;
-    private static Profile pro;
+    String theName, theWeight, theGender;
+    int theAge,theFt,theInch;
+    private static MainActivity pro;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_profile, container, false);
@@ -81,12 +83,7 @@ public class Profile  extends Fragment{
         getInch.setWrapSelectorWheel(false);
         getAge.setWrapSelectorWheel(false);
         viewPager = (ViewPager) getActivity().findViewById(R.id.container);
-        theName = getName.getText().toString();
-        String theWeight = getWeight.getText().toString();
-        int selectedIdGender = radioGroup.getCheckedRadioButtonId(); // Getting The Gender
-        int theAge = getAge.getValue();
-        int theFt = getFt.getValue();
-        int theInch = getInch.getValue();
+
 
         update.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,8 +93,24 @@ public class Profile  extends Fragment{
                     Toast.makeText(getContext(), "Please fill all the Information",
                             Toast.LENGTH_SHORT).show();
                 } else {
-
-
+                    weightUnit = (Spinner) getView().findViewById(R.id.unitWeight);
+                    theName = getName.getText().toString();
+                    theWeight = getWeight.getText().toString();
+                    int selectedIdGender = radioGroup.getCheckedRadioButtonId();// Getting The Gender
+                    theGender = ((RadioButton)getView().findViewById(selectedIdGender)).getText().toString();
+                    theAge = getAge.getValue();
+                    theFt = getFt.getValue();
+                    theInch = getInch.getValue();
+                    if(weightUnit.getSelectedItem().equals("Lbs")){
+                        //Converts Lbs to kg if Lbs
+                        theWeight = String.valueOf(Double.parseDouble(theWeight) * 0.453592);
+                    }
+                    DataHolder.setName(theName);
+                    DataHolder.setGender(theGender);
+                    DataHolder.setAge(theAge);
+                    DataHolder.setFeet(theFt);
+                    DataHolder.setInch(theInch);
+                    DataHolder.setWeight(theWeight);
 
                     viewPager.setCurrentItem(3);
                     Toast.makeText(getContext(), "Successfully Updated",
@@ -121,6 +134,7 @@ public class Profile  extends Fragment{
 
 
     }
+
 
 
 
