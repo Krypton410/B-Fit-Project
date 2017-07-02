@@ -4,6 +4,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -50,60 +51,70 @@ public class Calculator extends Fragment{
 
 
 
+                routine.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        if(routine.getSelectedItemPosition() == 0){
+                            if(DataHolder.getGender().equals("Male"))
+                            {
+                                tci.setText(String.valueOf(Double.valueOf(formula_Male) * 1.2));
+                            }
+                            else
+                            {
+                                tci.setText(String.valueOf(Double.valueOf(formula_Female) * 1.2));
+                            }
+                        }
+                        if(routine.getSelectedItemPosition() == 1){
+                            if(DataHolder.getGender().equals("Male"))
+                            {
+                                tci.setText(String.valueOf(Double.valueOf(formula_Male) * 1.375));
+                            }
+                            else
+                            {
+                                tci.setText(String.valueOf(Double.valueOf(formula_Female) * 1.375));
+                            }
+                        }
 
-                if(routine.getSelectedItemPosition() == 0){
-                    if(DataHolder.getGender().equals("Male"))
-                    {
-                        tci.setText(String.valueOf(Double.valueOf(formula_Male) * 1.2));
-                    }
-                    else
-                    {
-                        tci.setText(String.valueOf(Double.valueOf(formula_Female) * 1.2));
-                    }
-                }
-                if(routine.getSelectedItemPosition() == 1){
-                    if(DataHolder.getGender().equals("Male"))
-                    {
-                        tci.setText(String.valueOf(Double.valueOf(formula_Male) * 1.375));
-                    }
-                    else
-                    {
-                        tci.setText(String.valueOf(Double.valueOf(formula_Female) * 1.375));
-                    }
-                }
+                        if(routine.getSelectedItemPosition() == 2){
+                            if(DataHolder.getGender().equals("Male"))
+                            {
+                                tci.setText(String.valueOf(Double.valueOf(formula_Male) * 1.55));
+                            }
+                            else
+                            {
+                                tci.setText(String.valueOf(Double.valueOf(formula_Female) * 1.55));
+                            }
+                        }
 
-                if(routine.getSelectedItemPosition() == 2){
-                    if(DataHolder.getGender().equals("Male"))
-                    {
-                        tci.setText(String.valueOf(Double.valueOf(formula_Male) * 1.55));
-                    }
-                    else
-                    {
-                        tci.setText(String.valueOf(Double.valueOf(formula_Female) * 1.55));
-                    }
-                }
+                        if(routine.getSelectedItemPosition() == 3){
+                            if(DataHolder.getGender().equals("Male"))
+                            {
+                                tci.setText(String.valueOf(Double.valueOf(formula_Male) * 1.725));
+                            }
+                            else
+                            {
+                                tci.setText(String.valueOf(Double.valueOf(formula_Female) * 1.725));
+                            }
+                        }
 
-                if(routine.getSelectedItemPosition() == 3){
-                    if(DataHolder.getGender().equals("Male"))
-                    {
-                        tci.setText(String.valueOf(Double.valueOf(formula_Male) * 1.725));
-                    }
-                    else
-                    {
-                        tci.setText(String.valueOf(Double.valueOf(formula_Female) * 1.725));
-                    }
-                }
+                        if(routine.getSelectedItemPosition() == 4){
+                            if(DataHolder.getGender().equals("Male"))
+                            {
+                                tci.setText(String.valueOf(Double.valueOf(formula_Male) * 1.9));
+                            }
+                            else
+                            {
+                                tci.setText(String.valueOf(Double.valueOf(formula_Female) * 1.9));
+                            }
+                        }
 
-                if(routine.getSelectedItemPosition() == 4){
-                    if(DataHolder.getGender().equals("Male"))
-                    {
-                        tci.setText(String.valueOf(Double.valueOf(formula_Male) * 1.9));
                     }
-                    else
-                    {
-                        tci.setText(String.valueOf(Double.valueOf(formula_Female) * 1.9));
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
                     }
-                }
+                });
+
 
             }
 
@@ -114,4 +125,4 @@ public class Calculator extends Fragment{
 
         }
 
-}
+
