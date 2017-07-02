@@ -7,16 +7,17 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
 
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#f5f5f5">
+    android:background="#e5211f1f">
 
 
     <android.support.v4.view.ViewPager
         android:id="@+id/ViewPager1"
-        android:layout_width="476dp"
-        android:layout_height="125dp"
-        android:scaleX="2"
-        android:scaleY="2"
+        android:layout_width="396dp"
+        android:layout_height="86dp"
+        android:scaleX="4"
+        android:scaleY="4"
         android:layout_marginTop="-9dp"
+        android:visibility="gone"
         android:layout_weight="0.32">
 
     </android.support.v4.view.ViewPager>
@@ -25,8 +26,8 @@
     <AbsoluteLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_x="2dp"
-        android:layout_y="140dp">
+        android:layout_x="0dp"
+        android:layout_y="14dp">
 
         <TextView
             android:id="@+id/section_label"
@@ -35,7 +36,7 @@
             android:layout_x="18dp"
             android:layout_y="41dp"
             android:text="Name"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="15dp" />
 
         <EditText
@@ -45,7 +46,8 @@
             android:layout_x="99dp"
             android:layout_y="28dp"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:textColor="#fff" />
 
         <TextView
             android:id="@+id/section_labe2"
@@ -54,7 +56,7 @@
             android:layout_x="19dp"
             android:layout_y="209dp"
             android:text="Age"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="15dp" />
 
         <NumberPicker
@@ -63,7 +65,7 @@
             android:layout_height="70dp"
             android:layout_x="100dp"
             android:layout_y="182dp"
-
+            android:theme="@style/AppTheme.Picker"
             android:descendantFocusability="blocksDescendants" />
 
         <TextView
@@ -73,7 +75,7 @@
             android:layout_x="19dp"
             android:layout_y="304dp"
             android:text="Height"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="15dp" />
 
         <TextView
@@ -83,7 +85,7 @@
             android:layout_x="120dp"
             android:layout_y="304dp"
             android:text="Ft"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="15dp" />
 
         <TextView
@@ -93,7 +95,7 @@
             android:layout_x="232dp"
             android:layout_y="304dp"
             android:text="Inches"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="15dp" />
 
         <!--<EditText-->
@@ -110,6 +112,7 @@
             android:layout_height="70dp"
             android:layout_x="149dp"
             android:layout_y="279dp"
+            android:theme="@style/AppTheme.Picker"
             android:descendantFocusability="blocksDescendants" />
 
         <TextView
@@ -119,7 +122,7 @@
             android:layout_x="19dp"
             android:layout_y="394dp"
             android:text="Weight"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="15dp" />
 
         <Spinner
@@ -128,6 +131,8 @@
             android:layout_height="wrap_content"
             android:layout_x="112dp"
             android:layout_y="394dp"
+            android:theme="@style/AppTheme.Picker"
+            android:backgroundTint="#e93c0d"
             android:entries="@array/weight" />
 
         <EditText
@@ -136,6 +141,7 @@
             android:layout_height="wrap_content"
             android:layout_x="233dp"
             android:layout_y="386dp"
+            android:textColor="#fff"
             android:ems="10"
             android:inputType="numberDecimal" />
 
@@ -146,7 +152,7 @@
             android:layout_x="18dp"
             android:layout_y="119dp"
             android:text="Gender"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="15dp" />
 
         <RadioGroup
@@ -165,6 +171,7 @@
                 android:layout_weight="0.40"
                 android:layout_x="272dp"
                 android:layout_y="140dp"
+                android:textColor="#fff"
                 android:text="Male" />
 
             <RadioButton
@@ -173,6 +180,7 @@
                 android:layout_height="wrap_content"
                 android:layout_x="152dp"
                 android:layout_y="125dp"
+                android:textColor="#fff"
                 android:text="Female" />
         </RadioGroup>
 
@@ -190,6 +198,7 @@
             android:layout_height="70dp"
             android:layout_x="284dp"
             android:layout_y="279dp"
+            android:theme="@style/AppTheme.Picker"
             android:descendantFocusability="blocksDescendants" />
 
 
@@ -197,9 +206,9 @@
             android:id="@+id/button2"
             android:layout_width="185dp"
             android:layout_height="37dp"
-            android:layout_x="115dp"
-            android:layout_y="510dp"
-            android:background="@android:color/holo_red_dark"
+            android:layout_x="203dp"
+            android:layout_y="630dp"
+            android:background="#e93c0d"
             android:text="Update"
             android:textColor="#f9f9f9" />
     </AbsoluteLayout>

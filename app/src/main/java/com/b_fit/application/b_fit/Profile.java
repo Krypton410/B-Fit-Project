@@ -94,7 +94,8 @@ public class Profile  extends Fragment
                 if (getName.getText().toString().equals(check) || getWeight.getText().toString().equals(check)) {
                     Toast.makeText(getContext(), "Please fill all the Information",
                             Toast.LENGTH_SHORT).show();
-                } else {
+                }
+                else {
                     weightUnit = (Spinner) getView().findViewById(R.id.unitWeight);
                     theName = getName.getText().toString();
                     theWeight = getWeight.getText().toString();
@@ -103,10 +104,10 @@ public class Profile  extends Fragment
                     theAge = getAge.getValue();
                     theFt = getFt.getValue();
                     theInch = getInch.getValue();
-                    if (weightUnit.getSelectedItem().equals("Lbs")) {
-                        //Converts Lbs to kg if Lbs
-                        theWeight = String.valueOf(Double.parseDouble(theWeight) * 0.453592);
-                    }
+//                    if (weightUnit.getSelectedItem().equals("Lbs")) {
+//                        Converts Lbs to kg if Lbs
+//                        theWeight = String.valueOf(Double.parseDouble(theWeight) * 0.453592);
+//                    }
                     DataHolder.setName(theName);
                     DataHolder.setGender(theGender);
                     DataHolder.setAge(theAge);

@@ -32,7 +32,11 @@ public class Login extends AppCompatActivity{
     ViewPager viewPager;
     String theName, theWeight, theGender;
     int theAge,theFt,theInch;
-
+    SharedPreferences pref, pref2;
+    SharedPreferences.Editor editor;
+    //For Shared Preferences
+    String spName, spGender, spWeight;
+    int spAge, spFt, spInch;
     @Override
     protected void onCreate(Bundle savedInstanceState){
     super.onCreate(savedInstanceState);
@@ -68,58 +72,80 @@ public class Login extends AppCompatActivity{
         adapter = new CustomSwipeAdapter(this);
         viewPager.setAdapter(adapter);
 
-    update.setOnClickListener(new View.OnClickListener() {
+
+
+
+            update.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
 
-
-
-
             String check = "";
-            if (getName.getText().toString().equals(check) || getWeight.getText().toString().equals(check)) {
-                Toast.makeText(Login.this, "Please fill all the Information",
-                        Toast.LENGTH_SHORT).show();
-
-
-            } else {
 
 
 
-                weightUnit = (Spinner) findViewById(R.id.unitWeight);
-                theName = getName.getText().toString();
-                theWeight = getWeight.getText().toString();
-                int selectedIdGender = radioGroup.getCheckedRadioButtonId();// Getting The Gender
-                theGender = ((RadioButton) findViewById(selectedIdGender)).getText().toString();
-                theAge = getAge.getValue();
-                theFt = getFt.getValue();
-                theInch = getInch.getValue();
+                if (getName.getText().toString().equals(check) || getWeight.getText().toString().equals(check)) {
+                    Toast.makeText(Login.this, "Please fill all the Information",
+                            Toast.LENGTH_SHORT).show();
 
-                if (weightUnit.getSelectedItem().equals("Lbs")) {
-                    //Converts Lbs to kg if Lbs
-                    theWeight = String.valueOf(Double.parseDouble(theWeight) * 0.453592);
+
+                } else if (!getName.getText().toString().equals(check) || !getWeight.getText().toString().equals(check)) {
+                    pref = getSharedPreferences("user_Info", MODE_PRIVATE);
+                    editor = pref.edit();
+                    weightUnit = (Spinner) findViewById(R.id.unitWeight);
+                    theName = getName.getText().toString();
+                    theWeight = getWeight.getText().toString();
+                    int selectedIdGender = radioGroup.getCheckedRadioButtonId();// Getting The Gender
+                    theGender = ((RadioButton) findViewById(selectedIdGender)).getText().toString();
+                    theAge = getAge.getValue();
+                    theFt = getFt.getValue();
+                    theInch = getInch.getValue();
+
+                    if (weightUnit.getSelectedItem().equals("Lbs")) {
+                        //Converts Lbs to kg if Lbs
+                        theWeight = String.valueOf(Double.parseDouble(theWeight) * 0.45);
+                    }
+
+                    //Saving the data's
+
+
+                    //edit data
+                    editor = pref.edit();
+                    editor.putString("name", theName);
+                    editor.putString("gender", theGender);
+                    editor.putInt("age", theAge);
+                    editor.putInt("ft", theFt);
+                    editor.putInt("inch", theInch);
+                    editor.putString("weight", theWeight);
+                    editor.apply();
+
+
+                    //Shared Preferences for getting info
+                    pref2 = getSharedPreferences("user_Info", Context.MODE_PRIVATE);
+                    spName = pref2.getString("name", "");
+                    spGender = pref2.getString("gender", "");
+                    spWeight = pref2.getString("weight", "");
+                    spAge = pref2.getInt("age", 0);
+                    spFt = pref2.getInt("ft", 0);
+                    spInch = pref2.getInt("inch", 0);
+
+                    DataHolder.setName(spName);
+                    DataHolder.setGender(spGender);
+                    DataHolder.setAge(spAge);
+                    DataHolder.setWeight(spWeight);
+                    DataHolder.setFeet(spFt);
+                    DataHolder.setInch(spInch);
+
                 }
-                SharedPreferences pref = getSharedPreferences("user_Info" ,MODE_PRIVATE);
-                //edit data
-                SharedPreferences.Editor editor = pref.edit();
-                editor.putString("name", theName);
-                editor.putString("gender",theGender);
-                editor.putInt("age",theAge);
-                editor.putInt("ft", theFt);
-                editor.putInt("inch", theInch);
-                editor.putString("weight", theWeight);
-                editor.apply();
 
 
+            pref2 = getSharedPreferences("user_Info", Context.MODE_PRIVATE);
+            spName = pref2.getString("name", "");
+            spGender = pref2.getString("gender", "");
+            spWeight = pref2.getString("weight", "");
+            spAge = pref2.getInt("age", 0);
+            spFt = pref2.getInt("ft", 0);
+            spInch = pref2.getInt("inch", 0);
 
-
-
-                SharedPreferences pref2 = getSharedPreferences("user_Info", Context.MODE_PRIVATE);
-                String spName = pref2.getString("name", "");
-                String spGender = pref2.getString("gender", "");
-                String spWeight = pref2.getString("weight", "");
-                int spAge = pref2.getInt("age", 0);
-                int spFt = pref2.getInt("ft", 0);
-                int spInch = pref2.getInt("inch", 0);
 
                 DataHolder.setName(spName);
                 DataHolder.setGender(spGender);
@@ -127,62 +153,70 @@ public class Login extends AppCompatActivity{
                 DataHolder.setWeight(spWeight);
                 DataHolder.setFeet(spFt);
                 DataHolder.setInch(spInch);
+            Intent i = new Intent(Login.this, splash_Screen.class);
+            startActivity(i);
 
-
-//                DataHolder.setName(theName);
-//                DataHolder.setGender(theGender);
-//                DataHolder.setAge(theAge);
-//                DataHolder.setFeet(theFt);
-//                DataHolder.setInch(theInch);
-//                DataHolder.setWeight(theWeight);
-
-                Intent i = new Intent(Login.this, splash_Screen.class);
-                startActivity(i);
-
-//                viewPager.setCurrentItem(3);
-                Toast.makeText(Login.this, "Successfully Updated",
-                        Toast.LENGTH_SHORT).show();
-
-
-
+                if (getName.getText().toString().equals(check) || getWeight.getText().toString().equals(check)) {
+                    Toast.makeText(Login.this, "Update Failed",
+                            Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(Login.this, "Successfully Updated",
+                            Toast.LENGTH_SHORT).show();
+                }
 
             }
 
-        }
+
     });
 
 
 }
 
-    public void save(View v){
-        SharedPreferences pref = getSharedPreferences("user_Info" ,MODE_PRIVATE);
-        //edit data
-        SharedPreferences.Editor editor = pref.edit();
-        editor.putString("name", theName);
-        editor.putString("gender",theGender);
-        editor.putInt("age",theAge);
-        editor.putInt("ft", theFt);
-        editor.putInt("inch", theInch);
-        editor.putString("weight", theWeight);
-        editor.apply();
-    }
 
-    public void getSaved(View v){
-        SharedPreferences pref = getSharedPreferences("user_Info", Context.MODE_PRIVATE);
-        String spName = pref.getString("name", "");
-        String spGender = pref.getString("gender", "");
-        String spWeight = pref.getString("weight", "");
-        int spAge = pref.getInt("age", 0);
-        int spFt = pref.getInt("ft", 0);
-        int spInch = pref.getInt("inch", 0);
 
-        DataHolder.setName(spName);
-        DataHolder.setGender(spGender);
-        DataHolder.setAge(spAge);
-        DataHolder.setWeight(spWeight);
-        DataHolder.setFeet(spFt);
-        DataHolder.setInch(spInch);
 
-    }
+
+
+//    public void save(View v){
+//        SharedPreferences pref = getSharedPreferences("user_Info" ,MODE_PRIVATE);
+//        //edit data
+//        SharedPreferences.Editor editor = pref.edit();
+//        editor.putString("name", theName);
+//        editor.putString("gender",theGender);
+//        editor.putInt("age",theAge);
+//        editor.putInt("ft", theFt);
+//        editor.putInt("inch", theInch);
+//        editor.putString("weight", theWeight);
+//        editor.putBoolean("State", true); //added state
+//        editor.apply();
+//    }
+//
+//    public void getSaved(View v){
+//        SharedPreferences pref = getSharedPreferences("user_Info", Context.MODE_PRIVATE);
+//        String spName = pref.getString("name", "");
+//        String spGender = pref.getString("gender", "");
+//        String spWeight = pref.getString("weight", "");
+//        int spAge = pref.getInt("age", 0);
+//        int spFt = pref.getInt("ft", 0);
+//        int spInch = pref.getInt("inch", 0);
+//
+//        DataHolder.setName(spName);
+//        DataHolder.setGender(spGender);
+//        DataHolder.setAge(spAge);
+//        DataHolder.setWeight(spWeight);
+//        DataHolder.setFeet(spFt);
+//        DataHolder.setInch(spInch);
+//
+//    }
+//
+//    public boolean isLoggedIn(){
+//        return pref.getBoolean("State", false);
+//    }
+//    public void setIsLoggedIn(boolean state){
+//        editor = pref.edit();
+//        editor.putBoolean("State", state);
+//        editor.commit();
+//
+//    }
 }
 

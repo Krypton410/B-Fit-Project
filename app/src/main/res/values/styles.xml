@@ -19,5 +19,12 @@
     <style name="AppTheme.Custom" parent="@style/Theme.AppCompat">
         <item name="colorAccent">#8c7f7f</item>
 
+
   </style>
+<style name="AppTheme.Picker" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="android:textColorPrimary">#fff</item>
+</style>
+
+
+
 </resources>

@@ -14,7 +14,7 @@
         android:layout_height="37dp"
         android:layout_x="41dp"
         android:layout_y="473dp"
-        android:background="@android:color/holo_red_dark"
+        android:background="#e93c0d"
         android:text="Change User"
         android:textColor="#f9f9f9" />
 
@@ -97,7 +97,7 @@
         android:layout_marginStart="21dp"
         android:layout_marginTop="49dp"
         android:layout_x="118dp"
-        android:layout_y="191dp"
+        android:layout_y="183dp"
         android:text="Age"
         android:textColor="#000"
         android:textSize="15dp" />
