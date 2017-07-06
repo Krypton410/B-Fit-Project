@@ -13,6 +13,7 @@ public class DataHolder {
     private static int inch;
     private static String weight;
     private static String training;
+    private static boolean isLogged;
 
 
     public static void setName(String n) {
@@ -40,6 +41,9 @@ public class DataHolder {
     }
     public static void setTraining(String t){
         training = t;
+    }
+    public static void setIsLogged(boolean l){
+        isLogged = l;
     }
 
 
@@ -83,5 +87,8 @@ public class DataHolder {
     }
     public static String getTraining(){
         return training;
+    }
+    public static boolean getLogged(){
+        return isLogged;
     }
 }

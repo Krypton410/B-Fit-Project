@@ -39,6 +39,7 @@ public class Login extends AppCompatActivity{
     SharedPreferences.Editor editor;
     String spName, spGender, spWeight;
     int spAge, spFt, spInch;
+    boolean spLog;
     @Override
     protected void onCreate(Bundle savedInstanceState){
     super.onCreate(savedInstanceState);
@@ -119,6 +120,7 @@ public class Login extends AppCompatActivity{
                     editor.putInt("ft", theFt);
                     editor.putInt("inch", theInch);
                     editor.putString("weight", theWeight);
+                    editor.putBoolean("log", true);
                     editor.apply();
 
 
@@ -130,6 +132,8 @@ public class Login extends AppCompatActivity{
                     spAge = pref2.getInt("age", 0);
                     spFt = pref2.getInt("ft", 0);
                     spInch = pref2.getInt("inch", 0);
+                    spLog = pref2.getBoolean("log", true);
+
 
                     DataHolder.setName(spName);
                     DataHolder.setGender(spGender);
@@ -148,7 +152,7 @@ public class Login extends AppCompatActivity{
             spAge = pref2.getInt("age", 0);
             spFt = pref2.getInt("ft", 0);
             spInch = pref2.getInt("inch", 0);
-
+            spLog = pref2.getBoolean("log", false);
 
                 DataHolder.setName(spName);
                 DataHolder.setGender(spGender);
@@ -156,8 +160,13 @@ public class Login extends AppCompatActivity{
                 DataHolder.setWeight(spWeight);
                 DataHolder.setFeet(spFt);
                 DataHolder.setInch(spInch);
+                DataHolder.setIsLogged(spLog);
             Intent i = new Intent(Login.this, splash_Screen.class);
+
+            i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(i);
+            finish();
+
 
                 if (getName.getText().toString().equals(check) || getWeight.getText().toString().equals(check)) {
                     Toast.makeText(Login.this, "Update Failed",

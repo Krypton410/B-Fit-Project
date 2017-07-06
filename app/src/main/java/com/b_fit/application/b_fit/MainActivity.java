@@ -1,5 +1,6 @@
 package com.b_fit.application.b_fit;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -160,6 +161,9 @@ public class MainActivity extends AppCompatActivity{
 
         }
 
+
     }
+
+
 
 }

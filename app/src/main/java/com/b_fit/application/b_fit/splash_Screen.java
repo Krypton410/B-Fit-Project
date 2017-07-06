@@ -12,27 +12,34 @@ import android.view.WindowManager;
  * Created by Maxwell on 6/25/2017.
  */
 
-public class splash_Screen extends AppCompatActivity{
+public class splash_Screen extends AppCompatActivity {
 
     public int getRandomNumber(int min, int max) {
-        return (int)(Math.random() * ((max - min) + 1)) + min;
+        return (int) (Math.random() * ((max - min) + 1)) + min;
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         ActionBar actionbar = getSupportActionBar();
         actionbar.hide();
         setContentView(R.layout.splash_main);
-        new Handler().postDelayed(new Runnable(){
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void run(){
+            public void run() {
                 Intent homeIntent = new Intent(splash_Screen.this, MainActivity.class);
                 startActivity(homeIntent);
+                homeIntent.addCategory(Intent.CATEGORY_HOME);
+
                 finish();
+
             }
 
-        },getRandomNumber(200,900));}}
+
+        }, getRandomNumber(200, 900));
+    }
 
 
+
+}

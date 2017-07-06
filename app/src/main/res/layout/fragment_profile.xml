@@ -192,16 +192,6 @@
             android:descendantFocusability="blocksDescendants" />
 
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="185dp"
-            android:layout_height="37dp"
-            android:layout_x="203dp"
-            android:layout_y="630dp"
-            android:background="#F57C00"
-            android:text="Update"
-            android:textColor="#f9f9f9" />
-
         <android.support.v4.view.ViewPager
             android:id="@+id/ViewPager1"
             android:layout_width="396dp"
@@ -215,6 +205,16 @@
             android:scaleY="4">
 
         </android.support.v4.view.ViewPager>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="185dp"
+            android:layout_height="37dp"
+            android:layout_x="195dp"
+            android:layout_y="584dp"
+            android:background="#F57C00"
+            android:text="Update"
+            android:textColor="#f9f9f9" />
     </AbsoluteLayout>
     >
 

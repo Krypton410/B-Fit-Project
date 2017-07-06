@@ -21,14 +21,18 @@ public class Base extends AppCompatActivity {
         pref2 = getSharedPreferences("user_Info", Context.MODE_PRIVATE);
 
 
-        if(getSharedPreferences("user_Info", Context.MODE_PRIVATE) == null){
+        if(DataHolder.getLogged() == false){
             Intent i = new Intent(Base.this, Login.class);
+            i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(i);
+            finish();
             }
         else{
 
             Intent i = new Intent(Base.this, splash_Screen.class);
+            i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(i);
+            finish();
         }
 
 
