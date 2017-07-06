@@ -12,6 +12,7 @@ public class DataHolder {
     private static int feet;
     private static int inch;
     private static String weight;
+    private static String training;
 
 
     public static void setName(String n) {
@@ -37,6 +38,11 @@ public class DataHolder {
     public static void setWeight(String w) {
         weight = w;
     }
+    public static void setTraining(String t){
+        training = t;
+    }
+
+
 
     /**  Multi instance object
   DataHolder(String n, String g, int a, int ft, int in, String w){
@@ -74,5 +80,8 @@ public class DataHolder {
 
     public static String getWeight() {
         return weight;
+    }
+    public static String getTraining(){
+        return training;
     }
 }

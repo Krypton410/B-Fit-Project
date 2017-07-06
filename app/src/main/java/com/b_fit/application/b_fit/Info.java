@@ -2,6 +2,7 @@ package com.b_fit.application.b_fit;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.icu.math.BigDecimal;
 import android.icu.text.DecimalFormat;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -55,8 +56,8 @@ public class Info extends Fragment{
         gender.setText(DataHolder.getGender());
         age.setText(String.valueOf(DataHolder.getAge()));
         height.setText(String.valueOf(DataHolder.getFeet())+"'"+String.valueOf(DataHolder.getInch()) + " / " + String.valueOf((DataHolder.getFeet()*30.48) + (DataHolder.getInch()*2.54)) + "cm");
-        user_Weight.setText(String.valueOf(Double.valueOf(DataHolder.getWeight()) * 2.205) + " lbs " + " / " +
-        DataHolder.getWeight() + " Kg");
+        user_Weight.setText(String.valueOf(/*Math.round*/round(Double.valueOf(DataHolder.getWeight()) * 2.205, 3)) + " lbs " + " / " +
+        String.valueOf(round(Double.valueOf(DataHolder.getWeight()), 3)) + " Kg");
 
         //the Default for weight is Kilogram
 
@@ -67,6 +68,7 @@ public class Info extends Fragment{
         public void onClick(View v){
         Intent i = new Intent(getContext(), Login.class);
             startActivity(i);
+            DataHolder.setTraining("0");
         }
 
 
@@ -74,6 +76,14 @@ public class Info extends Fragment{
 
 
 
+    }
+    public static double round(double value, int places) {
+        if (places < 0) throw new IllegalArgumentException();
+
+        long factor = (long) Math.pow(10, places);
+        value = value * factor;
+        long tmp = Math.round(value);
+        return (double) tmp / factor;
     }
 
 

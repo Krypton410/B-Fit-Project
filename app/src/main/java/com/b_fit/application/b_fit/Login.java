@@ -34,9 +34,9 @@ public class Login extends AppCompatActivity{
     ViewPager viewPager;
     String theName, theWeight, theGender;
     int theAge,theFt,theInch;
+    //For Shared Preferences
     SharedPreferences pref, pref2;
     SharedPreferences.Editor editor;
-    //For Shared Preferences
     String spName, spGender, spWeight;
     int spAge, spFt, spInch;
     @Override

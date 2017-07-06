@@ -17,7 +17,7 @@ public class splash_Screen extends AppCompatActivity{
     public int getRandomNumber(int min, int max) {
         return (int)(Math.random() * ((max - min) + 1)) + min;
     }
-//    private static int SPLASH_TIMED_OUT = 2000;
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -33,6 +33,6 @@ public class splash_Screen extends AppCompatActivity{
                 finish();
             }
 
-        },getRandomNumber(200,1000));}}
+        },getRandomNumber(200,900));}}
 
 
