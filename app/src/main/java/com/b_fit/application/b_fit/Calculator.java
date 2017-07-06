@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -14,9 +15,10 @@ import android.widget.TextView;
 
 public class Calculator extends Fragment{
 
-    TextView theBmr, tci;
+    TextView theBmr, tci, bms, waterIntake;
     Spinner routine;
     String formula_Male, formula_Female;
+    Button infoBmr;
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
@@ -31,7 +33,9 @@ public class Calculator extends Fragment{
             theBmr = (TextView) getView().findViewById(R.id.bmr);
             routine = (Spinner) getView().findViewById(R.id.spinner);
             tci = (TextView) getView().findViewById(R.id.tci);
-
+            infoBmr = (Button) getView().findViewById(R.id.infoBmr);
+            bms = (TextView)getView().findViewById(R.id.bms);
+            waterIntake = (TextView) getView().findViewById(R.id.water);
             formula_Male = String.valueOf(66 + (13.7 * /*Weight*/ Double.valueOf(DataHolder.getWeight()))
                     + (5 *   /*Height*/ (DataHolder.getFeet()*30.48) + (DataHolder.getInch()*2.54))
                     - (6.8 * DataHolder.getAge()));
@@ -54,7 +58,15 @@ public class Calculator extends Fragment{
                 routine.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                        if(routine.getSelectedItemPosition() == 0){
+
+
+                        if(routine.getSelectedItemPosition() == 0) {
+
+                            tci.setText("No Data Displayed");
+
+                        }
+
+                        if(routine.getSelectedItemPosition() == 1){
                             if(DataHolder.getGender().equals("Male"))
                             {
                                 tci.setText(String.valueOf(Double.valueOf(formula_Male) * 1.2));
@@ -64,7 +76,7 @@ public class Calculator extends Fragment{
                                 tci.setText(String.valueOf(Double.valueOf(formula_Female) * 1.2));
                             }
                         }
-                        if(routine.getSelectedItemPosition() == 1){
+                        if(routine.getSelectedItemPosition() == 2){
                             if(DataHolder.getGender().equals("Male"))
                             {
                                 tci.setText(String.valueOf(Double.valueOf(formula_Male) * 1.375));
@@ -75,7 +87,7 @@ public class Calculator extends Fragment{
                             }
                         }
 
-                        if(routine.getSelectedItemPosition() == 2){
+                        if(routine.getSelectedItemPosition() == 3){
                             if(DataHolder.getGender().equals("Male"))
                             {
                                 tci.setText(String.valueOf(Double.valueOf(formula_Male) * 1.55));
@@ -86,7 +98,7 @@ public class Calculator extends Fragment{
                             }
                         }
 
-                        if(routine.getSelectedItemPosition() == 3){
+                        if(routine.getSelectedItemPosition() == 4){
                             if(DataHolder.getGender().equals("Male"))
                             {
                                 tci.setText(String.valueOf(Double.valueOf(formula_Male) * 1.725));
@@ -97,7 +109,7 @@ public class Calculator extends Fragment{
                             }
                         }
 
-                        if(routine.getSelectedItemPosition() == 4){
+                        if(routine.getSelectedItemPosition() == 5){
                             if(DataHolder.getGender().equals("Male"))
                             {
                                 tci.setText(String.valueOf(Double.valueOf(formula_Male) * 1.9));
@@ -114,6 +126,20 @@ public class Calculator extends Fragment{
                     public void onNothingSelected(AdapterView<?> parent) {
                     }
                 });
+
+
+
+            Double feetToMeters = (Double.valueOf(DataHolder.getFeet())*12)*0.025;
+            Double inchToMeters = (Double.valueOf(DataHolder.getInch()))*0.025;
+            Double weight = Double.valueOf(DataHolder.getWeight());
+            Double squaredMeters = (feetToMeters + inchToMeters)*(feetToMeters + inchToMeters);
+            //Body Mass Status
+            Double bmi = (weight / squaredMeters);
+            bms.setText(String.valueOf(bmi));
+            waterIntake.setText(String.valueOf(Double.valueOf(DataHolder.getWeight())*(0.45)*(0.5)/8) + " Ounces a day");
+
+
+
 
 
             }

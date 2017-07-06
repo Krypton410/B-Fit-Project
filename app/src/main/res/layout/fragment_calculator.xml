@@ -22,9 +22,10 @@
         android:layout_toEndOf="@+id/section_label"
         android:layout_x="10dp"
         android:layout_y="50dp"
+        android:fontFamily="sans-serif-smallcaps"
         android:text="BMR (Metric)"
         android:textColor="#000"
-        android:textSize="20sp" />
+        android:textSize="25sp" />
 
 
     <TextView
@@ -37,6 +38,7 @@
         android:layout_toEndOf="@+id/section_label"
         android:layout_x="10dp"
         android:layout_y="90dp"
+        android:fontFamily="sans-serif-smallcaps"
         android:text="theBMR"
         android:textColor="#000"
         android:textSize="15dp" />
@@ -51,9 +53,11 @@
         android:layout_toEndOf="@+id/section_label"
         android:layout_x="10dp"
         android:layout_y="130dp"
+        android:fontFamily="sans-serif-smallcaps"
         android:text="Total Calorie Intake "
         android:textColor="#000"
-        android:textSize="20sp" />
+        android:textSize="25sp" />
+
     <TextView
         android:id="@+id/tci"
         android:layout_width="wrap_content"
@@ -64,6 +68,7 @@
         android:layout_toEndOf="@+id/section_label"
         android:layout_x="10dp"
         android:layout_y="170dp"
+        android:fontFamily="sans-serif-smallcaps"
         android:text="Total Calorie Intake "
         android:textColor="#000"
         android:textSize="15sp" />
@@ -74,8 +79,77 @@
         android:layout_height="wrap_content"
         android:layout_x="10dp"
         android:layout_y="210dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:backgroundTint="#e93c0d"
         android:entries="@array/exercise"/>
 
+    <Button
+        android:id="@+id/infoBmr"
+        android:layout_width="24dp"
+        android:layout_height="30dp"
+        android:layout_x="331dp"
+        android:layout_y="40dp"
+        android:background="#f8f8f8"
+        android:drawableStart="@drawable/ic_info_black_24dp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/misc4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/section_label"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="96dp"
+        android:layout_toEndOf="@+id/section_label"
+        android:layout_x="10dp"
+        android:layout_y="250dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="BMI "
+        android:textColor="#000"
+        android:textSize="25sp" />
 
 
+    <TextView
+        android:id="@+id/bms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/section_label"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="96dp"
+        android:layout_toEndOf="@+id/section_label"
+        android:layout_x="10dp"
+        android:layout_y="290dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Body Mass Status "
+        android:textColor="#000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/misc6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/section_label"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="96dp"
+        android:layout_toEndOf="@+id/section_label"
+        android:layout_x="10dp"
+        android:layout_y="320dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Water Intake"
+        android:textColor="#000"
+        android:textSize="25sp" />
+    <TextView
+        android:id="@+id/water"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/section_label"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="96dp"
+        android:layout_toEndOf="@+id/section_label"
+        android:layout_x="10dp"
+        android:layout_y="360dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Water Intake "
+        android:textColor="#000"
+        android:textSize="15sp" />
 </AbsoluteLayout>

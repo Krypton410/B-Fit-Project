@@ -1,4 +1,5 @@
 package com.b_fit.application.b_fit;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.transition.Visibility;
@@ -29,8 +30,10 @@ public class Generator extends Fragment{
     RadioButton beginner,intermediate,advanced, weight, bodyweight, incorporate;
     TextView chest1, chest2, chest3, chest4, back1,back2,back3, back4, abs1, abs2, abs3, abs4, legs1, legs2, legs3, legs4;
     int a,a1,a2,a3, b, b1, b2, b3, ba, ba1, ba2, ba3, c, c1, c2, c3, d,d1,d2,d3, e, e1, e2, e3, f, f1, f2, f3;
-    String[]bchest, bback, babs, blegs, ichest, iback, iabs;
+    String[]bchest, bback, babs, blegs, ichest, iback, iabs, ilegs, achest, aback, abs, alegs;
     int pbTime = (int) (Math.random() * 1000);
+    int progress = 0;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -42,8 +45,11 @@ public class Generator extends Fragment{
     @Override
     public void onActivityCreated(Bundle savedInstanceState){
         super.onActivityCreated(savedInstanceState);
+        final Handler handler = new Handler();
+        pb = (ProgressBar) getView().findViewById(R.id.progressBar);
 
-                theCategory = (RadioGroup) getView().findViewById(R.id.category);
+
+        theCategory = (RadioGroup) getView().findViewById(R.id.category);
         statusSetter = (TextView) getView().findViewById(R.id.statusSetter);
         theStyle = (RadioGroup) getView().findViewById(R.id.style);
         beginner = (RadioButton) getView().findViewById(R.id.beginner);
@@ -52,7 +58,7 @@ public class Generator extends Fragment{
         weight = (RadioButton) getView().findViewById(R.id.weight);
         bodyweight = (RadioButton) getView().findViewById(R.id.bodyweight);
         incorporate = (RadioButton) getView().findViewById(R.id.incorporate);
-        pb = (ProgressBar) getView().findViewById(R.id.progressBar);
+
         int selectedCategory = theCategory.getCheckedRadioButtonId();
 
         //Initializing All TextViews
@@ -92,11 +98,6 @@ public class Generator extends Fragment{
         bchest[7] = "Wall push ups";
         bchest[8] = "Spiderman Push ups";
         bchest[9] = "Plank to push ups";
-//        a = (int) (Math.random()*10);
-//        a1 = (int) (Math.random()*10);
-//        a2 = (int) (Math.random()*10);
-//        a3 = (int) (Math.random()*10);
-
 
 
 
@@ -111,10 +112,6 @@ public class Generator extends Fragment{
         bback[6] = "Negative Pull ups";
         bback[7] = "Negative Chin Ups";
         bback[8] = "Australian Chin ups";
-//        b = (int) (Math.random()*9);
-//        b1 = (int) (Math.random()*9);
-//        b2 = (int) (Math.random()*9);
-//        b3 = (int) (Math.random()*9);
 
         //abs for beginner
         babs = new String[10];
@@ -128,10 +125,6 @@ public class Generator extends Fragment{
         babs[7] = "Straddle planks";
         babs[8] = "Straddle V ups";
         babs[9] = "Crunches";
-//        ba = (int) (Math.random()*10);
-//        ba1 = (int) (Math.random()*10);
-//        ba2 = (int) (Math.random()*10);
-//        ba3 = (int) (Math.random()*10);
 
        //legs for beginner
         blegs = new String[9];
@@ -144,10 +137,7 @@ public class Generator extends Fragment{
         blegs[6] = "Hindu squats";
         blegs[7] = "Frog Jumps";
         blegs[8] = "Jumping Lunges";
-//        c = (int) (Math.random()*9);
-//        c1 = (int) (Math.random()*9);
-//        c2 = (int) (Math.random()*9);
-//        c3 = (int) (Math.random()*9);
+
 
         //Chest for Intermediate
         ichest = new String[10];
@@ -161,10 +151,6 @@ public class Generator extends Fragment{
         ichest[7] = "Chest Tap Push ups";
         ichest[8] = "Russian Push ups";
         ichest[9] = "Weighted Push ups";
-//        d = (int) (Math.random()*10);
-//        d1 = (int) (Math.random()*10);
-//        d2 = (int) (Math.random()*10);
-//        d3 = (int) (Math.random()*10);
 
 
 
@@ -179,10 +165,6 @@ public class Generator extends Fragment{
         iback[6] = "Alternate grip switch PU/CU";
         iback[7] = "Weighted Australian PU";
         iback[8] = "Weighted Australian CU";
-//        e = (int) (Math.random()*9);
-//        e1 = (int) (Math.random()*9);
-//        e2 = (int) (Math.random()*9);
-//        e3 = (int) (Math.random()*9);
 
 
        //Abs for intermediate
@@ -196,11 +178,65 @@ public class Generator extends Fragment{
         iabs[6] = "Crossfit toe to bar";
         iabs[7] = "Hollow body hold half";
         iabs[8] = "Abs slider (Towel)";
-//        f = (int) (Math.random()*9);
-//        f1 = (int) (Math.random()*9);
-//        f2 = (int) (Math.random()*9);
-//        f3 = (int) (Math.random()*9);
 
+
+        //Legs for intermediate
+        ilegs = new String[7];
+        ilegs[0] = "Explosive Squats";
+        ilegs[1] = "Box Jumps";
+        ilegs[2] = "Single leg exlplosive squats";
+        ilegs[3] = "Weighted Squats";
+        ilegs[4] = "Burpees";
+        ilegs[5] = "Weighted Wide squat";
+        ilegs[6] = "Assisted pistol squat";
+
+        //Chest for advanced
+        achest = new String[10];
+        achest[0] = "One Arm Push ups";
+        achest[1] = "Typewriter Push ups";
+        achest[2] = "Archer Push Ups";
+        achest[3] = "Stationary Superman Push Ups";
+        achest[4] = "Superman Push Ups";
+        achest[5] = "Toe touch push ups aka 'Aztec Push Ups'";
+        achest[6] = "Single arm toe touch  push ups";
+        achest[7] = "Pseudo push ups";
+        achest[8] = "Back Clap Push Ups";
+        achest[9] = "OA clapping push ups(each arms)";
+
+        //Back for advanced
+        aback = new String[10];
+        aback[0] = "Clapping pull ups";
+        aback[1] = "Typewriter pull ups";
+        aback[2] = "Archer Pull Ups";
+        aback[3] = "Assisted One Arm pull ups";
+        aback[4] = "OAPU Negatives";
+        aback[5] = "Weighted pull ups";
+        aback[6] = "CG high Pull ups";
+        aback[7] = "WG high pull ups";
+        aback[8] = "Muscle Ups";
+        aback[9] = "WG muscle ups";
+
+
+        //Legs for advanced
+        alegs = new String[8];
+        alegs[0] = "Pistol squat(each leg)";
+        alegs[1] = "Weighted Pistol squat";
+        alegs[2] = "Alternate PS (Each legs)";
+        alegs[3] = "Diamond Squats";
+        alegs[4] = "Reverse Lunge Shrimp Squat";
+        alegs[5] = "Falling Tower";
+        alegs[6] = "Kneel to explosive squat";
+        alegs[7] = "Alternate Explosive PS";
+
+        //Abs for advanced
+        abs = new String[7];
+        abs[0] = "L sit(Bar)";
+        abs[1] = "Leg raise(Half)";
+        abs[2] = "Leg raise(Full)";
+        abs[3] = "L sit(Floor)";
+        abs[4] = "Full Hollow Body Hold";
+        abs[5] = "Dragon Flags";
+        abs[6] = "Ab roller";
 
 
         //Setting Visibility False/Gone
@@ -236,15 +272,52 @@ public class Generator extends Fragment{
             @Override
             public void onClick(View v) {
 
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        while (progress < getRandomNumber(2,10)){
+                            progress++;
+                            android.os.SystemClock.sleep(getRandomNumber(2,10));
+                            handler.post(new Runnable() {
+                                @Override
+                                public void run() {
+                                    pb.setProgress(progress);
+                                }
+                            });
+
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                new Handler().postDelayed(new Runnable(){
+                                    @Override
+                                    public void run(){
+                                        pb.setVisibility(View.VISIBLE);
+                                    }
+
+                                },getRandomNumber(2,10));
+                                pb.setVisibility(View.GONE);
+                            }
+                        });
+
+                    }}}
+                ).start();
+
+
+
+
+
+
+
+
+
                 int selectedCategory = theCategory.getCheckedRadioButtonId();
+                int selectedStyle = theStyle.getCheckedRadioButtonId();
                 String category_Picked = ((RadioButton)getView().findViewById(selectedCategory)).getText().toString();
-                pb.setVisibility((VISIBLE));
+                pb.setVisibility((GONE));
 
                 if (selectedCategory == R.id.beginner){
 
-
-
-
+                    if(selectedStyle == R.id.bodyweight){
 
                     statusSetter.setText(category_Picked+" 's Category");
                     statusSetter.setVisibility(VISIBLE);
@@ -258,6 +331,73 @@ public class Generator extends Fragment{
                     back3.setText(bback[getRandomNumber(0,8)]);
                     back4.setText(bback[getRandomNumber(0,8)]);
 
+                    abs1.setText(babs[getRandomNumber(0,9)]);
+                    abs2.setText(babs[getRandomNumber(0,9)]);
+                    abs3.setText(babs[getRandomNumber(0,9)]);
+                    abs4.setText(babs[getRandomNumber(0,9)]);
+
+                    generate(legs1, blegs[getRandomNumber(0,8)]);
+                    generate(legs2, blegs[getRandomNumber(0,8)]);
+                    generate(legs3, blegs[getRandomNumber(0,8)]);
+                    generate(legs4, blegs[getRandomNumber(0,8)]);}
+
+                    else if(selectedStyle == R.id.weight){
+
+
+
+
+                    }
+
+                    chest1.setVisibility(View.VISIBLE);
+                    chest2.setVisibility(View.VISIBLE);
+                    chest3.setVisibility(View.VISIBLE);
+                    chest4.setVisibility(View.VISIBLE);
+
+                    back1.setVisibility(View.VISIBLE);
+                    back2.setVisibility(View.VISIBLE);
+                    back3.setVisibility(View.VISIBLE);
+                    back4.setVisibility(View.VISIBLE);
+
+                    abs1.setVisibility(View.VISIBLE);
+                    abs2.setVisibility(View.VISIBLE);
+                    abs3.setVisibility(View.VISIBLE);
+                    abs4.setVisibility(View.VISIBLE);
+
+
+                    legs1.setVisibility(View.VISIBLE);
+                    legs2.setVisibility(View.VISIBLE);
+                    legs3.setVisibility(View.VISIBLE);
+                    legs4.setVisibility(View.VISIBLE);
+
+
+            }
+
+            else if(selectedCategory == R.id.intermediate){
+                    statusSetter.setText(category_Picked + "' s Category");
+                    statusSetter.setVisibility(VISIBLE);
+                    pb.setVisibility((GONE));
+                    generate(chest1, ichest[getRandomNumber(0,9)]);
+                    generate(chest2, ichest[getRandomNumber(0,9)]);
+                    generate(chest3, ichest[getRandomNumber(0,9)]);
+                    generate(chest4, ichest[getRandomNumber(0,9)]);
+
+                    generate(back1, iback[getRandomNumber(0,8)]);
+                    generate(back2, iback[getRandomNumber(0,8)]);
+                    generate(back3, iback[getRandomNumber(0,8)]);
+                    generate(back4, iback[getRandomNumber(0,8)]);
+
+                    generate(abs1, iabs[getRandomNumber(0,8)]);
+                    generate(abs2, iabs[getRandomNumber(0,8)]);
+                    generate(abs3, iabs[getRandomNumber(0,8)]);
+                    generate(abs4, iabs[getRandomNumber(0,8)]);
+
+                    generate(legs1, ilegs[getRandomNumber(0,6)]);
+                    generate(legs2, ilegs[getRandomNumber(0,6)]);
+                    generate(legs3, ilegs[getRandomNumber(0,6)]);
+                    generate(legs4, ilegs[getRandomNumber(0,6)]);
+
+
+
                     chest1.setVisibility(View.VISIBLE);
                     chest2.setVisibility(View.VISIBLE);
                     chest3.setVisibility(View.VISIBLE);
@@ -269,26 +409,66 @@ public class Generator extends Fragment{
                     back4.setVisibility(View.VISIBLE);
 
 
+                    abs1.setVisibility(View.VISIBLE);
+                    abs2.setVisibility(View.VISIBLE);
+                    abs3.setVisibility(View.VISIBLE);
+                    abs4.setVisibility(View.VISIBLE);
 
+                    legs1.setVisibility(View.VISIBLE);
+                    legs2.setVisibility(View.VISIBLE);
+                    legs3.setVisibility(View.VISIBLE);
+                    legs4.setVisibility(View.VISIBLE);
 
-            }
+                }
 
-            else if(selectedCategory == R.id.intermediate){
-
+                else if(selectedCategory == R.id.advanced){
+                    pb.setVisibility((GONE));
+                    statusSetter.setText(category_Picked + "' s Category");
                     statusSetter.setVisibility(VISIBLE);
 
-                    chest1.setText(ichest[d]);
-                    chest2.setText(ichest[d1]);
-                    chest3.setText(ichest[d2]);
-                    chest4.setText(ichest[d3]);
+                    generate(chest1, achest[getRandomNumber(0,9)]);
+                    generate(chest2, achest[getRandomNumber(0,9)]);
+                    generate(chest3, achest[getRandomNumber(0,9)]);
+                    generate(chest4, achest[getRandomNumber(0,9)]);
+
+                    generate(back1, aback[getRandomNumber(0,9)]);
+                    generate(back2, aback[getRandomNumber(0,9)]);
+                    generate(back3, aback[getRandomNumber(0,9)]);
+                    generate(back4, aback[getRandomNumber(0,9)]);
+
+                    generate(abs1, abs[getRandomNumber(0,6)]);
+                    generate(abs2, abs[getRandomNumber(0,6)]);
+                    generate(abs3, abs[getRandomNumber(0,6)]);
+                    generate(abs4, abs[getRandomNumber(0,6)]);
+
+                    generate(legs1, alegs[getRandomNumber(0,7)]);
+                    generate(legs2, alegs[getRandomNumber(0,7)]);
+                    generate(legs3, alegs[getRandomNumber(0,7)]);
+                    generate(legs4, alegs[getRandomNumber(0,7)]);
 
                     chest1.setVisibility(View.VISIBLE);
                     chest2.setVisibility(View.VISIBLE);
                     chest3.setVisibility(View.VISIBLE);
                     chest4.setVisibility(View.VISIBLE);
 
+                    back1.setVisibility(View.VISIBLE);
+                    back2.setVisibility(View.VISIBLE);
+                    back3.setVisibility(View.VISIBLE);
+                    back4.setVisibility(View.VISIBLE);
 
+
+                    abs1.setVisibility(View.VISIBLE);
+                    abs2.setVisibility(View.VISIBLE);
+                    abs3.setVisibility(View.VISIBLE);
+                    abs4.setVisibility(View.VISIBLE);
+
+                    legs1.setVisibility(View.VISIBLE);
+                    legs2.setVisibility(View.VISIBLE);
+                    legs3.setVisibility(View.VISIBLE);
+                    legs4.setVisibility(View.VISIBLE);
                 }
+
+
 
         }
 
@@ -300,6 +480,14 @@ public class Generator extends Fragment{
     }
     public int getRandomNumber(int min, int max) {
         return (int)(Math.random() * ((max - min) + 1)) + min;
+    }
+
+    public TextView generate(TextView set, String got){
+
+        set.setText(got);
+        return set;
+
+
     }
 
 }

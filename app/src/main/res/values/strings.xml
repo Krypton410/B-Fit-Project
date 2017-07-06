@@ -12,6 +12,7 @@
     </string-array>
 
     <string-array name="exercise">
+        <item>Please Select Exercise Engagement</item>
         <item>Little / No Exercise</item>
         <item>Light Exercise</item>
         <item>Moderate Exercise (3-5 Days/Week)</item>

@@ -59,19 +59,9 @@ public class MainActivity extends AppCompatActivity{
 
         tabLayout.getTabAt(0).setIcon(R.drawable.ic_directions_run_black_24dp);
         tabLayout.getTabAt(1).setIcon(R.drawable.ic_restaurant_menu_black_24dp);
-        tabLayout.getTabAt(2).setIcon(R.drawable.ic_info_black_24dp);
+        tabLayout.getTabAt(2).setIcon(R.drawable.ic_info_white_24dp);
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            //fab
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "IT301", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-
-            }
-        });
 
     }
 

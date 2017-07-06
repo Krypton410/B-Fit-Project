@@ -5,22 +5,9 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:theme="@style/AppTheme.AppBarOverlay"
     android:background="#e5211f1f">
-
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/ViewPager1"
-        android:layout_width="396dp"
-        android:layout_height="86dp"
-        android:scaleX="4"
-        android:scaleY="4"
-        android:layout_marginTop="-9dp"
-        android:visibility="gone"
-        android:layout_weight="0.32">
-
-    </android.support.v4.view.ViewPager>
 
 
     <AbsoluteLayout
@@ -47,6 +34,7 @@
             android:layout_y="28dp"
             android:ems="10"
             android:inputType="textPersonName"
+            android:backgroundTint="#F57C00"
             android:textColor="#fff" />
 
         <TextView
@@ -132,7 +120,7 @@
             android:layout_x="112dp"
             android:layout_y="394dp"
             android:theme="@style/AppTheme.Picker"
-            android:backgroundTint="#e93c0d"
+            android:backgroundTint="#F57C00"
             android:entries="@array/weight" />
 
         <EditText
@@ -172,6 +160,7 @@
                 android:layout_x="272dp"
                 android:layout_y="140dp"
                 android:textColor="#fff"
+                android:buttonTint="#F57C00"
                 android:text="Male" />
 
             <RadioButton
@@ -181,6 +170,7 @@
                 android:layout_x="152dp"
                 android:layout_y="125dp"
                 android:textColor="#fff"
+                android:buttonTint="#F57C00"
                 android:text="Female" />
         </RadioGroup>
 
@@ -208,9 +198,23 @@
             android:layout_height="37dp"
             android:layout_x="203dp"
             android:layout_y="630dp"
-            android:background="#e93c0d"
+            android:background="#F57C00"
             android:text="Update"
             android:textColor="#f9f9f9" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/ViewPager1"
+            android:layout_width="396dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="-9dp"
+            android:layout_weight="0.32"
+            android:layout_x="-12dp"
+
+            android:layout_y="497dp"
+            android:scaleX="4"
+            android:scaleY="4">
+
+        </android.support.v4.view.ViewPager>
     </AbsoluteLayout>
     >
 

@@ -6,7 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#fff"
+    android:background="#ffffff"
     >
     <ScrollView
         android:layout_width="fill_parent"
@@ -30,10 +30,10 @@
                     android:layout_height="wrap_content"
                     android:layout_x="8dp"
                     android:layout_y="10dp"
-                    android:fontFamily="sans-serif-condensed"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:text="Please Choose Category :"
                     android:textColor="@android:color/black"
-                    android:textSize="15sp" />
+                    android:textSize="25sp" />
 
                 <RadioGroup
                     android:id="@+id/category"
@@ -48,21 +48,30 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Beginner" />
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:text="Beginner"
+                        android:buttonTint="#F57C00"
+                        android:textSize="18sp" />
 
                     <RadioButton
                         android:id="@+id/intermediate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Intermediate" />
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:buttonTint="#F57C00"
+                        android:text="Intermediate"
+                        android:textSize="18sp" />
 
                     <RadioButton
                         android:id="@+id/advanced"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Advanced" />
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:buttonTint="#F57C00"
+                        android:text="Advanced"
+                        android:textSize="18sp" />
 
                 </RadioGroup>
 
@@ -73,10 +82,10 @@
                     android:layout_height="wrap_content"
                     android:layout_x="8dp"
                     android:layout_y="140dp"
-                    android:fontFamily="sans-serif-condensed"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:text="Style :"
                     android:textColor="@android:color/black"
-                    android:textSize="15sp" />
+                    android:textSize="25sp" />
 
 
                 <RadioGroup
@@ -85,28 +94,39 @@
                     android:layout_height="wrap_content"
                     android:layout_x="8dp"
                     android:layout_y="170dp"
-                    android:orientation="horizontal">
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:orientation="horizontal"
+                    android:textSize="25sp">
 
                     <RadioButton
                         android:id="@+id/bodyweight"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Bodyweight" />
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:buttonTint="#F57C00"
+                        android:text="Bodyweight"
+                        android:textSize="18sp" />
 
                     <RadioButton
                         android:id="@+id/weight"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Weights" />
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:buttonTint="#F57C00"
+                        android:text="Weights"
+                        android:textSize="18sp" />
 
                     <RadioButton
                         android:id="@+id/incorporate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Incorporate" />
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:buttonTint="#F57C00"
+                        android:text="Incorporate"
+                        android:textSize="18sp" />
 
                 </RadioGroup>
 
@@ -114,7 +134,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="3dp"
                     android:layout_y="230dp"
-                    android:background="#e93c0d"></AbsoluteLayout>
+                    android:background="#F57C00"></AbsoluteLayout>
 
                 <ProgressBar
                     android:id="@+id/progressBar"
@@ -135,6 +155,7 @@
                     android:layout_x="8dp"
                     android:layout_y="259dp"
                     android:text="statusSetter"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:textColor="@android:color/background_dark"
                     android:textSize="15sp" />
 
@@ -156,6 +177,7 @@
                     android:layout_y="654dp"
                     android:text="Back 1"
                     android:textColor="@android:color/background_dark"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:textSize="20sp" />
 
                 <TextView
@@ -166,6 +188,7 @@
                     android:layout_y="684dp"
                     android:text="Back 2"
                     android:textColor="@android:color/background_dark"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:textSize="20sp" />
 
                 <TextView
@@ -176,6 +199,7 @@
                     android:layout_y="714dp"
                     android:text="Back 3"
                     android:textColor="@android:color/background_dark"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:textSize="20sp" />
 
                 <TextView
@@ -186,6 +210,7 @@
                     android:layout_y="744dp"
                     android:text="Back 4"
                     android:textColor="@android:color/background_dark"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:textSize="20sp" />
 
                 <TextView
@@ -195,6 +220,7 @@
                     android:layout_x="6dp"
                     android:layout_y="844dp"
                     android:text="Abs Routine"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:textColor="@android:color/background_dark"
                     android:textSize="40sp" />
 
@@ -205,6 +231,7 @@
                     android:layout_x="8dp"
                     android:layout_y="1107dp"
                     android:text="Legs Routine"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:textColor="@android:color/background_dark"
                     android:textSize="40sp" />
 
@@ -214,6 +241,7 @@
                     android:layout_height="wrap_content"
                     android:layout_x="11dp"
                     android:layout_y="318dp"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:text="Chest"
                     android:textColor="@android:color/background_dark"
                     android:textSize="40sp" />
@@ -225,6 +253,7 @@
                     android:layout_x="11dp"
                     android:layout_y="385dp"
                     android:text="Chest 1"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:textColor="@android:color/background_dark"
                     android:textSize="20sp" />
 
@@ -236,6 +265,7 @@
                     android:layout_y="415dp"
                     android:text="Chest 2"
                     android:textColor="@android:color/background_dark"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:textSize="20sp" />
 
                 <TextView
@@ -244,6 +274,7 @@
                     android:layout_height="wrap_content"
                     android:layout_x="11dp"
                     android:layout_y="445dp"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:text="Chest 3"
                     android:textColor="@android:color/background_dark"
                     android:textSize="20sp" />
@@ -256,6 +287,7 @@
                     android:layout_y="475dp"
                     android:text="Chest 4"
                     android:textColor="@android:color/background_dark"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:textSize="20sp" />
 
                 <TextView
@@ -265,6 +297,7 @@
                     android:layout_x="11dp"
                     android:layout_y="920dp"
                     android:text="abs 1"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:textColor="@android:color/background_dark"
                     android:textSize="20sp" />
 
@@ -276,6 +309,7 @@
                     android:layout_y="951dp"
                     android:text="abs 2"
                     android:textColor="@android:color/background_dark"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:textSize="20sp" />
 
                 <TextView
@@ -286,6 +320,7 @@
                     android:layout_y="980dp"
                     android:text="abs 3"
                     android:textColor="@android:color/background_dark"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:textSize="20sp" />
 
                 <TextView
@@ -293,9 +328,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_x="12dp"
-                    android:layout_y="1016dp"
+                    android:layout_y="1009dp"
                     android:text="abs 4"
                     android:textColor="@android:color/background_dark"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:textSize="20sp" />
 
                 <TextView
@@ -306,6 +342,7 @@
                     android:layout_y="1174dp"
                     android:text="legs 1"
                     android:textColor="@android:color/background_dark"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:textSize="20sp" />
 
                 <TextView
@@ -316,16 +353,7 @@
                     android:layout_y="1206dp"
                     android:text="legs 2"
                     android:textColor="@android:color/background_dark"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/legs3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_x="8dp"
-                    android:layout_y="1233dp"
-                    android:text="legs 3"
-                    android:textColor="@android:color/background_dark"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:textSize="20sp" />
 
                 <TextView
@@ -336,9 +364,19 @@
                     android:layout_y="1265dp"
                     android:text="legs 4"
                     android:textColor="@android:color/background_dark"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:textSize="20sp" />
 
-
+                <TextView
+                    android:id="@+id/legs3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="8dp"
+                    android:layout_y="1234dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:text="legs 3"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="20sp" />
 
 
             </AbsoluteLayout>
@@ -359,7 +397,7 @@
             android:layout_height="38dp"
             android:layout_x="0dp"
             android:layout_y="0dp"
-            android:background="#e93c0d"
+            android:background="#F57C00"
             android:fontFamily="sans-serif-medium"
             android:text="Generate"
             android:textColor="@android:color/background_light" />
