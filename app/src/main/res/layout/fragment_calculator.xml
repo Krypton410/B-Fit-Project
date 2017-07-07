@@ -1,4 +1,4 @@
-<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ <AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,149 +7,236 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin">
 
-    <TextView
-        android:id="@+id/section_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/section_label"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="96dp"
-        android:layout_toEndOf="@+id/section_label"
-        android:layout_x="10dp"
-        android:layout_y="50dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="BMR (Metric)"
-        android:textColor="#000"
-        android:textSize="25sp" />
+     <ScrollView
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:layout_x="0dp"
+         android:layout_y="4dp">
 
 
-    <TextView
-        android:id="@+id/bmr"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/section_label"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="96dp"
-        android:layout_toEndOf="@+id/section_label"
-        android:layout_x="10dp"
-        android:layout_y="90dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="theBMR"
-        android:textColor="#000"
-        android:textSize="15dp" />
+         <LinearLayout
+             android:layout_height="fill_parent"
+             android:layout_width="match_parent"  >
 
-    <TextView
-        android:id="@+id/misc1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/section_label"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="96dp"
-        android:layout_toEndOf="@+id/section_label"
-        android:layout_x="10dp"
-        android:layout_y="130dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="Total Calorie Intake "
-        android:textColor="#000"
-        android:textSize="25sp" />
-
-    <TextView
-        android:id="@+id/tci"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/section_label"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="96dp"
-        android:layout_toEndOf="@+id/section_label"
-        android:layout_x="10dp"
-        android:layout_y="170dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="Total Calorie Intake "
-        android:textColor="#000"
-        android:textSize="15sp" />
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="364dp"
-        android:layout_height="wrap_content"
-        android:layout_x="10dp"
-        android:layout_y="210dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:backgroundTint="#e93c0d"
-        android:entries="@array/exercise"/>
-
-    <Button
-        android:id="@+id/infoBmr"
-        android:layout_width="24dp"
-        android:layout_height="30dp"
-        android:layout_x="331dp"
-        android:layout_y="40dp"
-        android:background="#f8f8f8"
-        android:drawableStart="@drawable/ic_info_black_24dp"
-        android:text="" />
-
-    <TextView
-        android:id="@+id/misc4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/section_label"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="96dp"
-        android:layout_toEndOf="@+id/section_label"
-        android:layout_x="10dp"
-        android:layout_y="250dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="BMI "
-        android:textColor="#000"
-        android:textSize="25sp" />
+         <AbsoluteLayout
+             android:layout_width="fill_parent"
+             android:layout_height="600dp"
+             android:layout_x="6dp"
+             android:layout_y="2dp"
+             android:orientation="vertical">
 
 
-    <TextView
-        android:id="@+id/bms"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/section_label"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="96dp"
-        android:layout_toEndOf="@+id/section_label"
-        android:layout_x="10dp"
-        android:layout_y="290dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="Body Mass Status "
-        android:textColor="#000"
-        android:textSize="15sp" />
+             <TextView
+                 android:id="@+id/misc6"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/section_label"
+                 android:layout_marginStart="12dp"
+                 android:layout_marginTop="96dp"
+                 android:layout_toEndOf="@+id/section_label"
+                 android:layout_x="10dp"
+                 android:layout_y="278dp"
+                 android:fontFamily="sans-serif-smallcaps"
+                 android:text="Water Intake"
+                 android:textColor="#000"
+                 android:textSize="25sp" />
 
-    <TextView
-        android:id="@+id/misc6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/section_label"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="96dp"
-        android:layout_toEndOf="@+id/section_label"
-        android:layout_x="10dp"
-        android:layout_y="320dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="Water Intake"
-        android:textColor="#000"
-        android:textSize="25sp" />
-    <TextView
-        android:id="@+id/water"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/section_label"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="96dp"
-        android:layout_toEndOf="@+id/section_label"
-        android:layout_x="10dp"
-        android:layout_y="360dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="Water Intake "
-        android:textColor="#000"
-        android:textSize="15sp" />
-</AbsoluteLayout>
+             <TextView
+                 android:id="@+id/weightGain"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/section_label"
+                 android:layout_marginStart="12dp"
+                 android:layout_marginTop="96dp"
+                 android:layout_toEndOf="@+id/section_label"
+                 android:layout_x="10dp"
+                 android:layout_y="453dp"
+                 android:fontFamily="sans-serif-smallcaps"
+                 android:text="Weight Gain "
+                 android:textColor="#000"
+                 android:textSize="15sp" />
+
+             <TextView
+                 android:id="@+id/section_label"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content" />
+
+             <TextView
+                 android:id="@+id/misc8"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/section_label"
+                 android:layout_marginStart="12dp"
+                 android:layout_marginTop="96dp"
+                 android:layout_toEndOf="@+id/section_label"
+                 android:layout_x="10dp"
+                 android:layout_y="416dp"
+                 android:fontFamily="sans-serif-smallcaps"
+                 android:text="Weight Gain"
+                 android:textColor="#000"
+                 android:textSize="25sp" />
+
+             <TextView
+                 android:id="@+id/bmr"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/section_label"
+                 android:layout_marginStart="12dp"
+                 android:layout_marginTop="96dp"
+                 android:layout_toEndOf="@+id/section_label"
+                 android:layout_x="10dp"
+                 android:layout_y="90dp"
+                 android:fontFamily="sans-serif-smallcaps"
+                 android:text="theBMR"
+                 android:textColor="#000"
+                 android:textSize="15dp" />
+
+             <Button
+                 android:id="@+id/infoBmr"
+                 android:layout_width="24dp"
+                 android:layout_height="30dp"
+                 android:layout_x="331dp"
+                 android:layout_y="40dp"
+                 android:background="#f8f8f8"
+                 android:drawableStart="@drawable/ic_info_black_24dp"
+                 android:text="" />
+
+             <TextView
+                 android:id="@+id/textView2"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/section_label"
+                 android:layout_marginStart="12dp"
+                 android:layout_marginTop="96dp"
+                 android:layout_toEndOf="@+id/section_label"
+                 android:layout_x="10dp"
+                 android:layout_y="50dp"
+                 android:fontFamily="sans-serif-smallcaps"
+                 android:text="BMR (Metric)"
+                 android:textColor="#000"
+                 android:textSize="25sp" />
+
+             <TextView
+                 android:id="@+id/water"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/section_label"
+                 android:layout_marginStart="12dp"
+                 android:layout_marginTop="96dp"
+                 android:layout_toEndOf="@+id/section_label"
+                 android:layout_x="10dp"
+                 android:layout_y="318dp"
+                 android:fontFamily="sans-serif-smallcaps"
+                 android:text="Water Intake "
+                 android:textColor="#000"
+                 android:textSize="15sp" />
+
+             <TextView
+                 android:id="@+id/misc7"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/section_label"
+                 android:layout_marginStart="12dp"
+                 android:layout_marginTop="96dp"
+                 android:layout_toEndOf="@+id/section_label"
+                 android:layout_x="10dp"
+                 android:layout_y="347dp"
+                 android:fontFamily="sans-serif-smallcaps"
+                 android:text="Weight Loss"
+                 android:textColor="#000"
+                 android:textSize="25sp" />
+
+             <TextView
+                 android:id="@+id/weightLoss"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/section_label"
+                 android:layout_marginStart="12dp"
+                 android:layout_marginTop="96dp"
+                 android:layout_toEndOf="@+id/section_label"
+                 android:layout_x="10dp"
+                 android:layout_y="382dp"
+                 android:fontFamily="sans-serif-smallcaps"
+                 android:text="Weight Loss "
+                 android:textColor="#000"
+                 android:textSize="15sp" />
+
+             <TextView
+                 android:id="@+id/misc1"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/section_label"
+                 android:layout_marginStart="12dp"
+                 android:layout_marginTop="96dp"
+                 android:layout_toEndOf="@+id/section_label"
+                 android:layout_x="10dp"
+                 android:layout_y="130dp"
+                 android:fontFamily="sans-serif-smallcaps"
+                 android:text="Total Calorie Intake "
+                 android:textColor="#000"
+                 android:textSize="25sp" />
+
+             <TextView
+                 android:id="@+id/tci"
+                 android:layout_width="150dp"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/section_label"
+                 android:layout_marginStart="12dp"
+                 android:layout_marginTop="96dp"
+                 android:layout_toEndOf="@+id/section_label"
+                 android:layout_x="10dp"
+                 android:layout_y="170dp"
+                 android:fontFamily="sans-serif-smallcaps"
+                 android:text="TCI"
+                 android:textColor="#000"
+                 android:textSize="15sp" />
+
+             <TextView
+                 android:id="@+id/misc4"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/section_label"
+                 android:layout_marginStart="12dp"
+                 android:layout_marginTop="96dp"
+                 android:layout_toEndOf="@+id/section_label"
+                 android:layout_x="10dp"
+                 android:layout_y="206dp"
+                 android:fontFamily="sans-serif-smallcaps"
+                 android:text="BMI "
+                 android:textColor="#000"
+                 android:textSize="25sp" />
+
+             <Spinner
+                 android:id="@+id/spinner"
+                 android:layout_width="259dp"
+                 android:layout_height="wrap_content"
+                 android:layout_x="125dp"
+                 android:layout_y="165dp"
+                 android:backgroundTint="#e93c0d"
+                 android:entries="@array/exercise"
+                 android:fontFamily="sans-serif-smallcaps"
+                 android:saveEnabled="true" />
+
+             <TextView
+                 android:id="@+id/bms"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/section_label"
+                 android:layout_marginStart="12dp"
+                 android:layout_marginTop="96dp"
+                 android:layout_toEndOf="@+id/section_label"
+                 android:layout_x="10dp"
+                 android:layout_y="246dp"
+                 android:fontFamily="sans-serif-smallcaps"
+                 android:text="Body Mass Status "
+                 android:textColor="#000"
+                 android:textSize="15sp" />
+
+
+             
+
+         </AbsoluteLayout>
+         </LinearLayout>
+     </ScrollView>
+ </AbsoluteLayout>

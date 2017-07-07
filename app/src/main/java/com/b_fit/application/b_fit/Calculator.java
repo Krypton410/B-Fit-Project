@@ -22,7 +22,7 @@ public class Calculator extends Fragment{
 
     SharedPreferences pref, pref2;
     SharedPreferences.Editor editor;
-    TextView theBmr, tci, bms, waterIntake;
+    TextView theBmr, tci, bms, waterIntake, weightLoss, weightGain;
     Spinner routine;
     String formula_Male, formula_Female, theRoutine;
     Button infoBmr;
@@ -38,7 +38,8 @@ public class Calculator extends Fragment{
         @Override
         public void onActivityCreated(Bundle savedInstanceState){
             super.onActivityCreated(savedInstanceState);
-
+            weightLoss = (TextView) getView().findViewById(R.id.weightLoss);
+            weightGain = (TextView) getView().findViewById(R.id.weightGain);
             theBmr = (TextView) getView().findViewById(R.id.bmr);
             routine = (Spinner) getView().findViewById(R.id.spinner);
             tci = (TextView) getView().findViewById(R.id.tci);
@@ -76,6 +77,8 @@ public class Calculator extends Fragment{
                         if(routine.getSelectedItemPosition() == 0) {
 
                             tci.setText("No Data Displayed");
+                            weightLoss.setText("No Data to Display");
+                            weightGain.setText("No Data to Display");
 
                         }
 
@@ -83,11 +86,21 @@ public class Calculator extends Fragment{
 
                             if(DataHolder.getGender().equals("Male"))
                             {
-                                tci.setText(String.valueOf(Math.round(Double.valueOf(formula_Male) * 1.2)));
+                                tci.setText(String.valueOf(Math.round(Double.valueOf(formula_Male) * 1.2)) + "Cal");
+                                weightLoss.setText(String.valueOf(Math.round(Double.valueOf(formula_Male) * 1.2)
+                                - (Math.round(Double.valueOf(formula_Male) * 1.2) * 0.20)) + " Cal");
+                                weightGain.setText(String.valueOf(Math.round(Double.valueOf(formula_Male) * 1.2)
+                                + (Math.round(Double.valueOf(formula_Male) * 1.2) * 0.20)) + " Cal");
                             }
                             else
                             {
+
                                 tci.setText(String.valueOf(Math.round(Double.valueOf(formula_Female) * 1.2)));
+                                weightLoss.setText(String.valueOf(Math.round(Double.valueOf(formula_Female) * 1.2)
+                                - (Math.round(Double.valueOf(formula_Female) * 1.2) * 0.20)) + " Cal");
+                                weightGain.setText(String.valueOf(Math.round(Double.valueOf(formula_Female) * 1.2)
+                                + (Math.round(Double.valueOf(formula_Female) * 1.2) * 0.20)) + " Cal");
+
                             }
                         }
                         if(routine.getSelectedItemPosition() == 2){
@@ -95,10 +108,19 @@ public class Calculator extends Fragment{
                             if(DataHolder.getGender().equals("Male"))
                             {
                                 tci.setText(String.valueOf(Math.round(Double.valueOf(formula_Male) * 1.375)) + " cal");
+                                weightLoss.setText(String.valueOf(Math.round(Double.valueOf(formula_Male) * 1.375)
+                                - (Math.round(Double.valueOf(formula_Male) * 1.375 * 0.20))) + " Cal");
+                                weightGain.setText(String.valueOf(Math.round(Double.valueOf(formula_Male) * 1.375)
+                                + (Math.round(Double.valueOf(formula_Male) * 1.375 * 0.20))) + " Cal");
                             }
                             else
                             {
                                 tci.setText(String.valueOf(Math.round(Double.valueOf(formula_Female) * 1.375)) + " cal");
+                                weightLoss.setText(String.valueOf(Math.round(Double.valueOf(formula_Female) * 1.375)
+                                        - (Math.round(Double.valueOf(formula_Female) * 1.375 * 0.20))) + " Cal");
+                                weightGain.setText(String.valueOf(Math.round(Double.valueOf(formula_Female) * 1.375)
+                                        + (Math.round(Double.valueOf(formula_Female) * 1.375 * 0.20))) + " Cal");
+
                             }
                         }
 
@@ -106,10 +128,18 @@ public class Calculator extends Fragment{
                             if(DataHolder.getGender().equals("Male"))
                             {
                                 tci.setText(String.valueOf(Math.round(Double.valueOf(formula_Male) * 1.55)) + " cal");
+                                weightLoss.setText(String.valueOf(Math.round(Double.valueOf(formula_Male) * 1.55)
+                                        - (Math.round(Double.valueOf(formula_Male) * 1.55 * 0.20))) + " Cal");
+                                weightGain.setText(String.valueOf(Math.round(Double.valueOf(formula_Male) * 1.55)
+                                        + (Math.round(Double.valueOf(formula_Male) * 1.55 * 0.20))) + " Cal");
                             }
                             else
                             {
                                 tci.setText(String.valueOf(Math.round(Double.valueOf(formula_Female) * 1.55)) + " cal");
+                                weightLoss.setText(String.valueOf(Math.round(Double.valueOf(formula_Female) * 1.55)
+                                        - (Math.round(Double.valueOf(formula_Female) * 1.55 * 0.20))) + " Cal");
+                                weightGain.setText(String.valueOf(Math.round(Double.valueOf(formula_Female) * 1.55)
+                                        + (Math.round(Double.valueOf(formula_Female) * 1.55 * 0.20))) + " Cal");
                             }
                         }
 
@@ -117,10 +147,18 @@ public class Calculator extends Fragment{
                             if(DataHolder.getGender().equals("Male"))
                             {
                                 tci.setText(String.valueOf(Math.round(Double.valueOf(formula_Male) * 1.725)) + " cal");
+                                weightLoss.setText(String.valueOf(Math.round(Double.valueOf(formula_Male) * 1.725)
+                                        - (Math.round(Double.valueOf(formula_Male) * 1.725 * 0.20))) + " Cal");
+                                weightGain.setText(String.valueOf(Math.round(Double.valueOf(formula_Male) * 1.725)
+                                        + (Math.round(Double.valueOf(formula_Male) * 1.725 * 0.20))) + " Cal");
                             }
                             else
                             {
                                 tci.setText(String.valueOf(Math.round(Double.valueOf(formula_Female) * 1.725)) + " cal");
+                                weightLoss.setText(String.valueOf(Math.round(Double.valueOf(formula_Female) * 1.725)
+                                        - (Math.round(Double.valueOf(formula_Female) * 1.725 * 0.20))) + " Cal");
+                                weightGain.setText(String.valueOf(Math.round(Double.valueOf(formula_Female) * 1.725)
+                                        + (Math.round(Double.valueOf(formula_Female) * 1.725 * 0.20))) + " Cal");
                             }
                         }
 
@@ -128,10 +166,18 @@ public class Calculator extends Fragment{
                             if(DataHolder.getGender().equals("Male"))
                             {
                                 tci.setText(String.valueOf(Math.round(Double.valueOf(formula_Male) * 1.9)) + " cal");
+                                weightLoss.setText(String.valueOf(Math.round(Double.valueOf(formula_Male) * 1.9)
+                                        - (Math.round(Double.valueOf(formula_Male) * 1.9 * 0.20))) + " Cal");
+                                weightGain.setText(String.valueOf(Math.round(Double.valueOf(formula_Male) * 1.9)
+                                        + (Math.round(Double.valueOf(formula_Male) * 1.9 * 0.20))) + " Cal");
                             }
                             else
                             {
                                 tci.setText(String.valueOf(Math.round(Double.valueOf(formula_Female) * 1.9)) + " cal");
+                                weightLoss.setText(String.valueOf(Math.round(Double.valueOf(formula_Female) * 1.9)
+                                        - (Math.round(Double.valueOf(formula_Female) * 19 * 0.20))) + " Cal");
+                                weightGain.setText(String.valueOf(Math.round(Double.valueOf(formula_Female) * 1.9)
+                                        + (Math.round(Double.valueOf(formula_Female) * 1.9 * 0.20))) + " Cal");
                             }
                         }
                         theRoutine =  String.valueOf(routine.getSelectedItemPosition());
@@ -166,7 +212,8 @@ public class Calculator extends Fragment{
             Double bmi = (weight / squaredMeters);
 
             bms.setText(String.valueOf(round(bmi, 3)));
-            waterIntake.setText(String.valueOf(Double.valueOf(DataHolder.getWeight())*(2.205)*(0.5)) + " Oz / " + String.valueOf(Math.round(Double.valueOf(DataHolder.getWeight())*(2.205)*(0.5)/8)) + " Cups a day");
+            waterIntake.setText(String.valueOf(Double.valueOf(DataHolder.getWeight())*(2.205)*(0.5)) + " Oz / " +
+                    String.valueOf(Math.round(Double.valueOf(DataHolder.getWeight())*(2.205)*(0.5)/8)) + " Cups");
 
 
 
