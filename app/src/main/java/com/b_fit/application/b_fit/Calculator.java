@@ -45,7 +45,7 @@ public class Calculator extends Fragment{
             theBmr = (TextView) getView().findViewById(R.id.bmr);
             routine = (Spinner) getView().findViewById(R.id.spinner);
             tci = (TextView) getView().findViewById(R.id.tci);
-            infoBmr = (Button) getView().findViewById(R.id.infoBmr);
+
             bms = (TextView)getView().findViewById(R.id.bms);
             waterIntake = (TextView) getView().findViewById(R.id.water);
             formula_Male = String.valueOf(round(66 + (13.7 * /*Weight*/ Double.valueOf(DataHolder.getWeight()))
@@ -211,7 +211,6 @@ public class Calculator extends Fragment{
                                         - (Math.round(Float.valueOf(formula_Male) * 1.375f) * 0.20f);
                                 gainFat = Math.round(((gain * 1.375f) * 0.25f) / 9f);
                                 lossFat = Math.round(((loss * 1.375f) * 0.25f) / 9f);
-
                                 gainCarb = Math.round((gain * 1.375f) - (gainFat + protein));
                                 lossCarb = Math.round((loss * 1.375f) - (lossFat + protein));
 

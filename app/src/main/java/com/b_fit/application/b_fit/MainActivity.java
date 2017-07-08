@@ -87,31 +87,46 @@ public class MainActivity extends AppCompatActivity{
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        switch (item.getItemId()) {
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+            //noinspection SimplifiableIfStatement
+            case R.id.help:
 
-            return true;
+                Intent i = new Intent(this, Help.class);
+                this.startActivity(i);
+                break;
+
+
+            case R.id.connect:
+                Intent intent = new Intent(this, Connect.class);
+                this.startActivity(intent);
+                break;
+
+
+
+            case R.id.app_bar_search:
+
+                try {
+                    LayoutInflater layoutInflater = (LayoutInflater) getBaseContext().getSystemService(LAYOUT_INFLATER_SERVICE);
+                    View popupView = layoutInflater.inflate(R.layout.activity_search, null);
+                    popupWindow = new PopupWindow(popupView,
+                            ViewPager.LayoutParams.WRAP_CONTENT,
+                            ViewPager.LayoutParams.WRAP_CONTENT);
+                    popupWindow.setBackgroundDrawable(new BitmapDrawable(null, ""));
+                    popupWindow.setOutsideTouchable(true);
+                    popupWindow.showAtLocation(findViewById(R.id.toolbar), Gravity.TOP, 0, 208);
+
+
+                } catch (Exception e) {
+                }
+
+
+
+
+            default:
+                return super.onOptionsItemSelected(item);
         }
-        if (id == R.id.app_bar_search)
-        {
-            try{
-                LayoutInflater layoutInflater = (LayoutInflater) getBaseContext().getSystemService(LAYOUT_INFLATER_SERVICE);
-                View popupView = layoutInflater.inflate(R.layout.activity_search, null);
-                popupWindow= new PopupWindow(popupView,
-                        ViewPager.LayoutParams.WRAP_CONTENT,
-                        ViewPager.LayoutParams.WRAP_CONTENT);
-                popupWindow.setBackgroundDrawable(new BitmapDrawable(null, ""));
-                popupWindow.setOutsideTouchable(true);
-                popupWindow.showAtLocation(findViewById(R.id.toolbar), Gravity.TOP, 0 ,210);
-
-
-            }catch (Exception e){}
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+        return true;
     }
 
 

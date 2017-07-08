@@ -6,7 +6,23 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_x="0dp"
+        android:layout_y="4dp">
 
+
+        <LinearLayout
+            android:layout_height="fill_parent"
+            android:layout_width="match_parent"  >
+
+            <AbsoluteLayout
+                android:layout_width="fill_parent"
+                android:layout_height="650dp"
+                android:layout_x="6dp"
+                android:layout_y="2dp"
+                android:orientation="vertical">
 
     <Button
         android:id="@+id/button3"
@@ -158,4 +174,11 @@
         android:textColor="#000"
         android:textSize="15dp" />
 
-</AbsoluteLayout>
+
+
+
+
+            </AbsoluteLayout>
+</LinearLayout>
+        </ScrollView>
+    </AbsoluteLayout>

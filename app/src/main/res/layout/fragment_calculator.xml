@@ -26,7 +26,6 @@
              android:layout_y="2dp"
              android:orientation="vertical">
 
-
              <TextView
                  android:id="@+id/misc6"
                  android:layout_width="wrap_content"
@@ -91,16 +90,6 @@
                  android:text="theBMR"
                  android:textColor="#000"
                  android:textSize="15dp" />
-
-             <Button
-                 android:id="@+id/infoBmr"
-                 android:layout_width="24dp"
-                 android:layout_height="30dp"
-                 android:layout_x="331dp"
-                 android:layout_y="40dp"
-                 android:background="#f8f8f8"
-                 android:drawableStart="@drawable/ic_info_black_24dp"
-                 android:text="" />
 
              <TextView
                  android:id="@+id/textView2"
@@ -214,8 +203,8 @@
                  android:layout_x="125dp"
                  android:layout_y="165dp"
                  android:backgroundTint="#e93c0d"
-                 android:entries="@array/exercise"
                  android:fontFamily="sans-serif-smallcaps"
+                 android:entries="@array/exercise"
                  android:saveEnabled="true" />
 
              <TextView

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.b_fit.application.b_fit.MainActivity">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/help"
         android:orderInCategory="101"
         android:title="@string/action_settings"
         app:showAsAction="never" />
@@ -22,7 +22,7 @@
 
     </item>
     <item
-        android:id="@+id/action_settings1"
+        android:id="@+id/connect"
         android:orderInCategory="101"
         android:title="@string/action_settings1"
         app:showAsAction="never" />

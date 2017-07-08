@@ -30,8 +30,7 @@ public class Login extends AppCompatActivity{
     EditText getName, getWeight;
     Button update;
     Spinner weightUnit;
-    CustomSwipeAdapter adapter;
-    ViewPager viewPager;
+
     String theName, theWeight, theGender;
     int theAge,theFt,theInch;
     //For Shared Preferences
@@ -72,9 +71,7 @@ public class Login extends AppCompatActivity{
     getInch.setWrapSelectorWheel(false);
     getAge.setWrapSelectorWheel(false);
 
-        viewPager = (ViewPager) findViewById(R.id.ViewPager1);
-        adapter = new CustomSwipeAdapter(this);
-        viewPager.setAdapter(adapter);
+
 
 
 
