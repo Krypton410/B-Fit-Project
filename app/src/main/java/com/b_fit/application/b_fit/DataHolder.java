@@ -14,7 +14,7 @@ public class DataHolder {
     private static String weight;
     private static String training;
     private static boolean isLogged;
-
+    private static float protein,carbs,fats, gainCarb, gainFat, lossCarb, lossFat;
 
     public static void setName(String n) {
        name = n;
@@ -45,6 +45,28 @@ public class DataHolder {
     public static void setIsLogged(boolean l){
         isLogged = l;
     }
+    public static void setProtein(float p){
+        protein = p;
+    }
+    public static void setCarbs(float c){
+        carbs = c;
+    }
+    public static void setFats(float f){
+        fats = f;
+    }
+    public static void setGainCarb(float carb){
+        gainCarb = carb;
+    }
+    public static void setGainFat(float fat){
+        gainFat = fat;
+    }
+    public static void setLossCarb(float lCarb){
+        lossCarb = lCarb; //WeightLoss Carb
+    }
+    public static void setLossFat(float lo){
+        lossFat = lo;//WeightLoss Fat
+    }
+
 
 
 
@@ -90,5 +112,29 @@ public class DataHolder {
     }
     public static boolean getLogged(){
         return isLogged;
+    }
+    public static double getProtein()
+    {
+        return protein;
+    }
+    public static double getCarbs()
+    {
+        return carbs;
+    }
+    public static double getFats()
+    {
+        return fats;
+    }
+    public static float getGainCarb(){
+        return gainCarb;
+    }
+    public static float getGainFat(){
+        return gainFat;
+    }
+    public static float getLossCarb(){
+        return lossCarb;
+    }
+    public static float getLossFat(){
+        return lossFat;
     }
 }

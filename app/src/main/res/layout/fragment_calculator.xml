@@ -234,7 +234,25 @@
                  android:textSize="15sp" />
 
 
-             
+
+
+             <TextView
+                 android:id="@+id/theProtein"
+
+                 android:layout_width="150dp"
+                 android:visibility="gone"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/section_label"
+                 android:layout_marginStart="12dp"
+                 android:layout_marginTop="96dp"
+                 android:layout_toEndOf="@+id/section_label"
+                 android:layout_x="200dp"
+                 android:layout_y="370dp"
+                 android:fontFamily="sans-serif-smallcaps"
+                 android:text="ed"
+                 android:textColor="#000"
+                 android:textSize="15sp" />
+
 
          </AbsoluteLayout>
          </LinearLayout>

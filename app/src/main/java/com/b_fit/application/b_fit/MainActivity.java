@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity{
 
 
 
+
     }
 
 
@@ -129,9 +130,9 @@ public class MainActivity extends AppCompatActivity{
         }
 
         Generator gen = new Generator();
-        Calculator cal = new Calculator();
         Info inf = new Info();
-        Graph graph = new Graph();
+
+
 
 
         @Override
@@ -140,15 +141,16 @@ public class MainActivity extends AppCompatActivity{
 //             Return a PlaceholderFragment (defined as a static inner class below).
 
 
-
             switch (position) {
 
                 case 0:
                     return gen;
                 case 1:
+                    Calculator cal = new Calculator();
                     return cal;
                 case 2:
-                    return  graph;
+                    Graph graph = new Graph();
+                    return graph;
                 case 3:
                     return inf;
             }

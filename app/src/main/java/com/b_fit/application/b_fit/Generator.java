@@ -29,7 +29,6 @@ public class Generator extends Fragment{
     ProgressBar pb;
     RadioButton beginner,intermediate,advanced, weight, bodyweight, incorporate;
     TextView chest1, chest2, chest3, chest4, back1,back2,back3, back4, abs1, abs2, abs3, abs4, legs1, legs2, legs3, legs4;
-    int a,a1,a2,a3, b, b1, b2, b3, ba, ba1, ba2, ba3, c, c1, c2, c3, d,d1,d2,d3, e, e1, e2, e3, f, f1, f2, f3;
     String[]bchest, bback, babs, blegs, ichest, iback, iabs, ilegs, achest, aback, abs, alegs;
     int pbTime = (int) (Math.random() * 1000);
     int progress = 0;

@@ -12,12 +12,21 @@
     </string-array>
 
     <string-array name="exercise">
-        <item>Please Select Exercise Engagement</item>
-        <item>Little / No Exercise</item>
-        <item>Light Exercise</item>
-        <item>Moderate Exercise (3-5 Days/Week)</item>
-        <item>Very Active (6-7 Days/Week)</item>
-        <item>Extra Active</item>
+    <item>Please Select Exercise Engagement</item>
+    <item>Little / No Exercise</item>
+    <item>Light Exercise</item>
+    <item>Moderate Exercise (3-5 Days/Week)</item>
+    <item>Very Active (6-7 Days/Week)</item>
+    <item>Extra Active</item>
+
+</string-array>
+
+
+    <string-array name="goal">
+        <item>Gain</item>
+        <item>Maintain</item>
+        <item>Fat Loss</item>
+
 
     </string-array>
 

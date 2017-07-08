@@ -3,10 +3,72 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<com.github.mikephil.charting.charts.PieChart
-    android:id="@+id/pieChart"
-    android:layout_marginTop="60dp"
-    android:layout_width="match_parent"
-    android:layout_height="339dp"></com.github.mikephil.charting.charts.PieChart>
 
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_x="0dp"
+        android:layout_y="4dp">
+
+
+        <LinearLayout
+            android:layout_height="fill_parent"
+            android:layout_width="match_parent"  >
+
+            <AbsoluteLayout
+                android:layout_width="fill_parent"
+                android:layout_height="700dp"
+                android:layout_x="6dp"
+                android:layout_y="2dp"
+                android:orientation="vertical">
+
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pieChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="339dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_y="20dp"></com.github.mikephil.charting.charts.PieChart>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/section_label"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="96dp"
+                    android:layout_toEndOf="@+id/section_label"
+                    android:layout_x="3dp"
+                    android:layout_y="10dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:text="Macro Intake"
+                    android:textColor="#000"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="67dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/section_label"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="96dp"
+                    android:layout_toEndOf="@+id/section_label"
+                    android:layout_x="10dp"
+                    android:layout_y="368dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:text="Goal"
+                    android:textColor="#000"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/goal"
+                    android:layout_width="300dp"
+                    android:layout_height="32dp"
+                    android:layout_x="105dp"
+                    android:layout_y="365dp"
+                    android:entries="@array/goal"
+                    android:fontFamily="sans-serif-smallcaps" />
+            </AbsoluteLayout>
+        </LinearLayout>
+    </ScrollView>/
 </LinearLayout>
