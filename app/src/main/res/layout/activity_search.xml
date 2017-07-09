@@ -7,13 +7,17 @@
     android:orientation="vertical">
 
     <EditText
-        android:id="@+id/search"
+        android:id="@+id/activitySearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
         android:fontFamily="sans-serif-smallcaps"
-        android:text="Search"
+        android:focusable="true"
+        android:text="Russian Push ups"
+        android:imeOptions="actionSearch"
+
+
         android:layout_weight="0.02" />
     <RadioGroup
         android:layout_width="match_parent"
@@ -61,7 +65,7 @@
     </RadioGroup>
     <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="59dp"
+        android:layout_height="50dp"
         android:layout_x="0dp"
         android:layout_y="4dp">
 
@@ -95,6 +99,8 @@
             android:layout_marginLeft="9dp"
             android:fontFamily="sans-serif-smallcaps"
             android:text="TextView"
+            android:onClick="onClick"
+            android:clickable="true"
             android:layout_weight="1" />
 
         <TextView
@@ -104,6 +110,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-smallcaps"
             android:layout_weight="1"
+            android:onClick="onClick"
+            android:clickable="true"
             android:text="TextView" />
 
         <TextView
@@ -113,6 +121,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-smallcaps"
             android:layout_weight="1"
+            android:onClick="onClick"
+            android:clickable="true"
             android:text="TextView" />
 
 
@@ -123,6 +133,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-smallcaps"
             android:layout_weight="1"
+            android:onClick="onClick"
+            android:clickable="true"
             android:text="TextView" />
         <TextView
             android:id="@+id/five"
@@ -131,6 +143,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-smallcaps"
             android:layout_weight="1"
+            android:onClick="onClick"
+            android:clickable="true"
             android:text="TextView" />
 
         <TextView
@@ -140,6 +154,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-smallcaps"
             android:layout_weight="1"
+            android:onClick="onClick"
+            android:clickable="true"
             android:text="TextView" />
 
         <TextView
@@ -149,9 +165,34 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-smallcaps"
             android:layout_weight="1"
+            android:onClick="onClick"
+            android:clickable="true"
             android:text="TextView" />
         <TextView
             android:id="@+id/eight"
+            android:layout_width="368dp"
+            android:layout_marginLeft="9dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:clickable="true"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/nine"
+            android:layout_width="368dp"
+            android:layout_marginLeft="9dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:clickable="true"
+            android:text="TextView" />
+
+
+        <TextView
+            android:id="@+id/ten"
             android:layout_width="368dp"
             android:layout_marginLeft="9dp"
             android:layout_height="wrap_content"

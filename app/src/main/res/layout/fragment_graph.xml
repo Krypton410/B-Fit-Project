@@ -18,7 +18,7 @@
 
             <AbsoluteLayout
                 android:layout_width="fill_parent"
-                android:layout_height="700dp"
+                android:layout_height="1100dp"
                 android:layout_x="6dp"
                 android:layout_y="2dp"
                 android:orientation="vertical">
@@ -28,8 +28,8 @@
                     android:id="@+id/pieChart"
                     android:layout_width="match_parent"
                     android:layout_height="339dp"
-                    android:layout_marginTop="60dp"
-                    android:layout_y="20dp"></com.github.mikephil.charting.charts.PieChart>
+                    android:layout_marginTop="70dp"
+                    android:layout_y="40dp"></com.github.mikephil.charting.charts.PieChart>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -45,28 +45,46 @@
                     android:textColor="#000"
                     android:textSize="20sp" />
 
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pieChart2"
+                    android:layout_width="match_parent"
+                    android:layout_height="339dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_y="550dp"></com.github.mikephil.charting.charts.PieChart>
+
+                <Spinner
+                    android:id="@+id/goal"
+                    android:layout_width="403dp"
+                    android:layout_height="32dp"
+                    android:layout_x="6dp"
+                    android:layout_y="403dp"
+                    android:entries="@array/goal"
+                    android:fontFamily="sans-serif-smallcaps" />
+
                 <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="67dp"
+                    android:id="@+id/textView45"
+                    android:layout_width="191dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/section_label"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="96dp"
                     android:layout_toEndOf="@+id/section_label"
-                    android:layout_x="10dp"
-                    android:layout_y="368dp"
+                    android:layout_x="0dp"
+                    android:layout_y="508dp"
                     android:fontFamily="sans-serif-smallcaps"
-                    android:text="Goal"
+                    android:text="Meal Distribution"
                     android:textColor="#000"
                     android:textSize="20sp" />
 
                 <Spinner
-                    android:id="@+id/goal"
-                    android:layout_width="300dp"
+                    android:id="@+id/meal"
+                    android:layout_width="397dp"
                     android:layout_height="32dp"
-                    android:layout_x="105dp"
-                    android:layout_y="365dp"
-                    android:entries="@array/goal"
+                    android:layout_x="8dp"
+                    android:layout_y="920dp"
+                    android:entries="@array/meals"
+
                     android:fontFamily="sans-serif-smallcaps" />
             </AbsoluteLayout>
         </LinearLayout>

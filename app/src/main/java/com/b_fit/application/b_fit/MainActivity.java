@@ -1,7 +1,9 @@
 package com.b_fit.application.b_fit;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
+import android.os.MessageQueue;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,15 +17,23 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity{
 
@@ -41,10 +51,14 @@ public class MainActivity extends AppCompatActivity{
      * The {@link ViewPager} that will host the section contents.
      */
     private ViewPager mViewPager;
+    EditText search;
     ViewPager viewPager;
     CustomSwipeAdapter adapter;
     String Text = "The_Text";
+    TextView one, two, three, four, five, six, seven, eight, nine, ten;
     PopupWindow popupWindow;
+    String theSearch;
+    int searchIndex;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -103,24 +117,92 @@ public class MainActivity extends AppCompatActivity{
                 break;
 
 
-
             case R.id.app_bar_search:
 
-                try {
-                    LayoutInflater layoutInflater = (LayoutInflater) getBaseContext().getSystemService(LAYOUT_INFLATER_SERVICE);
-                    View popupView = layoutInflater.inflate(R.layout.activity_search, null);
-                    popupWindow = new PopupWindow(popupView,
-                            ViewPager.LayoutParams.WRAP_CONTENT,
-                            ViewPager.LayoutParams.WRAP_CONTENT);
-                    popupWindow.setBackgroundDrawable(new BitmapDrawable(null, ""));
-                    popupWindow.setOutsideTouchable(true);
-                    popupWindow.showAtLocation(findViewById(R.id.toolbar), Gravity.TOP, 0, 208);
+                LayoutInflater layoutInflater = (LayoutInflater) getBaseContext().getSystemService(LAYOUT_INFLATER_SERVICE);
+//                View popupView = layoutInflater.inflate(R.layout.activity_search, null);
+
+                final LinearLayout popupView = (LinearLayout) getLayoutInflater().inflate(R.layout.activity_search, null);
+
+                popupWindow = new PopupWindow(popupView,
+                        ViewPager.LayoutParams.WRAP_CONTENT,
+                        ViewPager.LayoutParams.WRAP_CONTENT);
+                popupWindow.setBackgroundDrawable(new BitmapDrawable(null, ""));
+                popupWindow.setOutsideTouchable(true);
+                popupWindow.showAtLocation(findViewById(R.id.toolbar), Gravity.TOP, 0, 208);
+                popupWindow.setFocusable(true);
+                popupWindow.update();
 
 
-                } catch (Exception e) {
-                }
 
 
+                    one = (TextView) popupView.findViewById(R.id.one);
+                    two = (TextView) popupView.findViewById(R.id.two);
+                    three = (TextView) popupView.findViewById(R.id.three);
+                    four = (TextView) popupView.findViewById(R.id.four);
+                    five = (TextView) popupView.findViewById(R.id.five);
+                    six = (TextView) popupView.findViewById(R.id.six);
+                    seven = (TextView) popupView.findViewById(R.id.seven);
+                    eight = (TextView) popupView.findViewById(R.id.eight);
+                    nine = (TextView) popupView.findViewById(R.id.nine);
+                    ten = (TextView) popupView.findViewById(R.id.ten);
+                    search = (EditText) popupView.getRootView().findViewById(R.id.activitySearch);
+
+                ArrayList<TextView> searchable = new ArrayList<>(Arrays.asList(
+
+                        one,two,three,four,five,six,seven,eight,nine,ten
+                ));
+
+                TextView[] test1 = new TextView[10];
+                test1[0] = one;
+                test1[1] = two;
+                test1[2] = three;
+                test1[3] = four;
+                test1[4] = five;
+                test1[5] = six;
+                test1[6] = seven;
+                test1[7] = eight;
+                test1[8] = nine;
+                test1[9] = ten;
+
+
+                Arrays.sort(DataHolder.getExercise());
+
+                search.setText("", TextView.BufferType.SPANNABLE);
+                ArrayList<String> converted = new ArrayList<>(Arrays.asList(DataHolder.getExercise()));
+
+           for (int x = 0; x < converted.size(); x++){
+                try{
+               searchable.get(x).setText(converted.get(x));
+                 test1[x].setText(converted.get(x));
+                }catch (Exception e){Toast.makeText(this, "Unavailable", Toast.LENGTH_SHORT).show();}
+           }
+
+
+//            ten.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+////                    Toast.makeText(this, "You Cliced the Button!", Toast.LENGTH_SHORT).show();
+//                }
+//            });
+
+
+
+
+                    search.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+                        @Override
+                        public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                            if(actionId == EditorInfo.IME_ACTION_SEARCH){
+
+                                theSearch = search.getText().toString().toLowerCase();
+                                try{searchIndex = binarySearch(DataHolder.getExercise(), theSearch);}
+                                catch(Exception e){ one.setText("Retry"); }
+                                return true;
+                            }
+
+                            return false;
+                        }
+                    });
 
 
             default:
@@ -206,8 +288,48 @@ public class MainActivity extends AppCompatActivity{
         }
 
 
+
+
+
+
+    }
+    public int binarySearch(String[] a, String y) {
+        int low = 0;
+        int high = a.length - 1;
+        int mid;
+        String[] x = a;
+        y.replaceAll(" ", "");
+        for(int i = 0; i < a.length; i++){
+            a[i] = a[i].toLowerCase();
+            a[i] = a[i].replaceAll(" ", "");
+            x = a;
+        }
+
+
+        while (low <= high) {
+            mid = (low + high) / 2;
+
+            if (x[mid].compareTo(y) < 0) {
+                low = mid + 1;
+            } else if (x[mid].compareTo(y) > 0) {
+                high = mid - 1;
+            } else {
+                return mid;
+            }
+        }
+
+
+        for(int i = 0; i < a.length; i++){
+            DataHolder.getExercise()[i] = a[i].toUpperCase();
+            DataHolder.getExercise()[i] = a[i];
+
+        }
+
+        Toast.makeText(this, searchIndex != -1 ? DataHolder.getExercise()[searchIndex]+ " - Index is "+searchIndex : "Not found", Toast.LENGTH_LONG).show();
+        return -1;
     }
 
+        //yourString.replaceAll(" ","");
 
 
 }

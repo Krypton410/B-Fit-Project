@@ -6,6 +6,7 @@ package com.b_fit.application.b_fit;
 
 public class DataHolder {
 
+    private static String[] exercise;
     private static String name;
     private static String gender;
     private static int age;
@@ -65,6 +66,9 @@ public class DataHolder {
     }
     public static void setLossFat(float lo){
         lossFat = lo;//WeightLoss Fat
+    }
+    public static void setExercise(String[] e){
+        exercise = e;
     }
 
 
@@ -136,5 +140,9 @@ public class DataHolder {
     }
     public static float getLossFat(){
         return lossFat;
+    }
+    public static String[] getExercise(){
+
+        return exercise;
     }
 }

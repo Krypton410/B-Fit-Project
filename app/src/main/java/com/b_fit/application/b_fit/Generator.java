@@ -151,7 +151,7 @@ public class Generator extends Fragment{
         ichest[8] = "Russian Push ups";
         ichest[9] = "Weighted Push ups";
 
-
+        DataHolder.setExercise(ichest);
 
        //Back for intemediate
         iback = new String[9];
